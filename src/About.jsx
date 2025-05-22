@@ -1,23 +1,29 @@
 function AboutUs() {
 	return (
-		<section
-			id="about"
-			className="bg-gray-300 text-gray-900 px-6 py-16 mx-auto w-full"
-		>
-			<h2 className="text-5xl font-bold text-center mb-8">About Dreaux</h2>
+		<section id="about" className="bg-gray-300 text-gray-900 py-16 w-full">
+			<div className="max-w-4xl mx-auto px-6">
+				<h2 className="text-5xl font-bold text-center mb-8">ABOUT DREAUX</h2>
 
-			<p className="mb-6 leading-relaxed">
-				I’m Adrian, the developer and strategist behind Dreaux, dedicated to
-				helping businesses craft digital experiences that stand out and get
-				results. Whether it’s a sleek website, a powerful web app, or a mobile
-				solution, I build with care, creativity, and attention to detail.
-			</p>
+				<p className="mb-6 leading-relaxed">
+					Hi, I’m Adrian — the developer and strategist behind Dreaux. I’m
+					passionate about crafting digital experiences that not only look
+					great, but actually solve problems and drive results.
+				</p>
 
-			<p className="mb-6 leading-relaxed">
-				Using modern tools like React, Tailwind CSS, and SEO analytics, I create
-				digital products that are not only beautiful but also fast, accessible,
-				and effective.
-			</p>
+				<p className="mb-6 leading-relaxed">
+					Whether you're a business looking to elevate your online presence, or
+					someone with a powerful idea for a website or app, I’m here to help
+					bring that vision to life. I collaborate closely with clients of all
+					sizes to turn ideas into thoughtful, scalable digital products.
+				</p>
+
+				<p className="mb-6 leading-relaxed">
+					I work with modern tools and frameworks tailored to each project’s
+					needs — ensuring what we build is fast, accessible, and aligned with
+					your goals. Every project is an opportunity to create something
+					meaningful, and I’d love to help bring yours to life.
+				</p>
+			</div>
 		</section>
 	);
 }

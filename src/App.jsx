@@ -4,6 +4,7 @@ import Hero from './Hero';
 import AboutUs from './About';
 import Process from './Process';
 import Contact from './Contact';
+import Projects from './Projects';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 			<Hero />
 			<AboutUs />
 			<Services />
+			<Projects />
 			<Process />
 			<Contact />
 		</>
