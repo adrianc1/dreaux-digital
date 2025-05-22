@@ -1,6 +1,6 @@
 function Process() {
 	return (
-		<section className="bg-gray-50 text-gray-900 py-16 px-6 max-w-4xl mx-auto">
+		<section className="bg-gray-50 text-gray-900 py-16 px-6 w-full mx-auto">
 			<h2 className="text-4xl font-bold text-center mb-12">How I Work</h2>
 			<ol className="space-y-10 list-decimal list-inside max-w-xl mx-auto text-lg leading-relaxed">
 				<li>

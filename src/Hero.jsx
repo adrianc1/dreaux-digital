@@ -14,9 +14,11 @@ function Hero() {
 						and purpose.
 					</p>
 				</div>
-				<button className="bg-[#7ddeff]  px-4 py-2 rounded font-semibold hover:bg-[#5CD8E8] transition w-36 mx-auto text-neutral-950">
-					Get Started
-				</button>
+				<a href="#services">
+					<button className="bg-[#7ddeff]  px-4 py-2 rounded font-semibold hover:bg-[#5CD8E8] transition w-36 mx-auto text-neutral-950">
+						View Services
+					</button>
+				</a>
 			</div>
 		</div>
 	);

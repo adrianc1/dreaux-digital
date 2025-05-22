@@ -1,7 +1,10 @@
 function Services() {
 	return (
 		<section className="bg-black text-white py-16 px-6 max-w-5xl mx-auto">
-			<h2 className="text-4xl font-bold text-center mb-12 text-[#FFD600]">
+			<h2
+				id="services"
+				className="text-4xl font-bold text-center mb-12 text-[#FFD600]"
+			>
 				Services
 			</h2>
 			<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -35,9 +38,11 @@ function Services() {
 				</div>
 			</div>
 			<div className="text-center">
-				<button className="bg-[#7ddeff] text-black font-semibold px-6 py-3 rounded shadow hover:bg-[#5CD8E8] transition">
-					Get Started
-				</button>
+				<a href="#contact">
+					<button className="bg-[#7ddeff] text-black font-semibold px-6 py-3 rounded shadow hover:bg-[#5CD8E8] transition">
+						Get Started
+					</button>
+				</a>
 			</div>
 		</section>
 	);
