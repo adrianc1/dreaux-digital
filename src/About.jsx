@@ -1,6 +1,9 @@
 function AboutUs() {
 	return (
-		<section className="bg-gray-300 text-gray-900 px-6 py-16 mx-auto w-full">
+		<section
+			id="about"
+			className="bg-gray-300 text-gray-900 px-6 py-16 mx-auto w-full"
+		>
 			<h2 className="text-5xl font-bold text-center mb-8">About Dreaux</h2>
 
 			<p className="mb-6 leading-relaxed">
