@@ -5,6 +5,7 @@ import AboutUs from './About';
 import Process from './Process';
 import Contact from './Contact';
 import Projects from './Projects';
+// import Nav from './Nav';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
 	return (
 		<>
+			{/* <Nav /> */}
 			<Hero />
 			<AboutUs />
 			<Services />

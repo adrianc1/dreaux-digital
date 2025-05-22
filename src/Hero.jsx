@@ -1,9 +1,10 @@
 import { IoIosArrowDown } from 'react-icons/io';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Hero() {
 	return (
-		<div className="hero-container bg-black w-full h-[100vh] text-center px-4 ">
-			<div className="hero-content pt-6 h-[90%] flex flex-col justify-around lg:h-full">
+		<div className="hero-container bg-black w-full h-[100vh] text-center px-4 flex flex-col justify-center ">
+			<div className="hero-content border  pt-6 h-[90%] flex flex-col justify-around lg:h-full">
 				<h1 className="title dreaux-title text-[#FFD600] text-7xl font-bold tracking-wider md:text-9xl">
 					DREAUX <h2 className="title digital-title tracking-wide">DIGITAL</h2>
 				</h1>
