@@ -2,7 +2,9 @@ function AboutUs() {
 	return (
 		<section id="about" className="bg-gray-300 text-gray-900 py-16 w-full">
 			<div className="max-w-4xl mx-auto px-6">
-				<h2 className="text-4xl font-bold text-center mb-8">ABOUT DREAUX</h2>
+				<h2 className="text-4xl font-bold text-center mb-8">
+					ABOUT DREAUX DIGITAL
+				</h2>
 				<img src="/pfp.png" alt="" className="w-1/2 mx-auto mb-8" />
 
 				<p className="mb-6 leading-relaxed">

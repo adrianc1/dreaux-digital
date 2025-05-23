@@ -1,15 +1,7 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 
-import { useState } from 'react';
-
-function Nav() {
-	const [showNav, setShowNav] = useState(false);
-
-	function toggleNav() {
-		setShowNav((prev) => !prev);
-	}
-
+function Nav({ showNav, onClick, showTitle }) {
 	return (
 		<div>
 			<div
@@ -19,7 +11,7 @@ function Nav() {
 			>
 				<ul
 					className="flex flex-col gap-8 pb-4 pt-4 font-bold"
-					onClick={toggleNav}
+					onClick={onClick}
 				>
 					<li>
 						<a href="#about">About</a>
@@ -35,17 +27,23 @@ function Nav() {
 					</li>
 				</ul>
 			</div>
+			<div
+				className="text-[#FFD600] font-bold text-2xl transition-opacity duration-300 fixed top-4 px-5 z-51"
+				style={{ opacity: showTitle ? 1 : 0 }}
+			>
+				DREAUX DIGITAL
+			</div>
 
 			<div className="nav fixed top-0 right-0 w-full h-10 bg-black flex justify-end items-center px-6 py-8 z-50">
 				{showNav ? (
 					<IoCloseSharp
 						className="text-white text-3xl cursor-pointer transition-all duration-400"
-						onClick={toggleNav}
+						onClick={onClick}
 					/>
 				) : (
 					<GiHamburgerMenu
 						className="text-white text-3xl cursor-pointer transition-all duration-400"
-						onClick={toggleNav}
+						onClick={onClick}
 					/>
 				)}
 			</div>

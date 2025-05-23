@@ -2,7 +2,7 @@ function Projects() {
 	return (
 		<section id="projects" className="bg-white text-gray-900 py-16 w-full">
 			<div className="max-w-6xl mx-auto px-6">
-				<h2 className="text-5xl font-bold text-center mb-12">PROJECTS</h2>
+				<h2 className="text-4xl font-bold text-center mb-12">PROJECTS</h2>
 
 				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 					{/* Project Card 1 */}
