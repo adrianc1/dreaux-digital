@@ -96,7 +96,7 @@ function Projects() {
 								Multipage real estate website
 							</p>
 							<a
-								href="coastalkeyrealty.netlify.app"
+								href="https://coastalkeyrealty.netlify.app"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-blue-500 hover:underline text-sm font-medium"
