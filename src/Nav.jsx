@@ -1,10 +1,54 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoCloseSharp } from 'react-icons/io5';
+
+import { useState } from 'react';
 
 function Nav() {
+	const [showNav, setShowNav] = useState(false);
+
+	function toggleNav() {
+		setShowNav((prev) => !prev);
+	}
+
 	return (
-		<div className="nav flex justify-between w-full bg-black">
-			<span>x</span>
-			<GiHamburgerMenu className="w-auto text-white" />;
+		<div>
+			<div
+				className={`nav-menu fixed w-full text-center text-[#FFD600] bg-black transition-all duration-400 ${
+					showNav ? 'top-16' : '-top-96'
+				}`}
+			>
+				<ul
+					className="flex flex-col gap-8 pb-4 pt-4 font-bold"
+					onClick={toggleNav}
+				>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#services">Services</a>
+					</li>
+					<li>
+						<a href="#projects">Projects</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<div className="nav fixed top-0 right-0 w-full h-10 bg-black flex justify-end items-center px-6 py-8 z-50">
+				{showNav ? (
+					<IoCloseSharp
+						className="text-white text-3xl cursor-pointer transition-all duration-400"
+						onClick={toggleNav}
+					/>
+				) : (
+					<GiHamburgerMenu
+						className="text-white text-3xl cursor-pointer transition-all duration-400"
+						onClick={toggleNav}
+					/>
+				)}
+			</div>
 		</div>
 	);
 }
