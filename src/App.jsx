@@ -6,6 +6,7 @@ import Process from './Process';
 import Contact from './Contact';
 import Projects from './Projects';
 import Nav from './Nav';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
 			<Projects />
 			<Process />
 			<Contact />
+			<Footer />
 		</>
 	);
 }

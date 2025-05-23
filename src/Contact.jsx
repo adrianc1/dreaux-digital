@@ -2,12 +2,12 @@ function Contact() {
 	return (
 		<section
 			id="contact"
-			className="bg-white text-gray-900 py-16 px-6 max-w-3xl mx-auto"
+			className="bg-white text-gray-900 py-16 px-6 max-w-4xl mx-auto"
 		>
 			<h2 className="text-4xl font-bold text-center mb-8 uppercase">
 				Get In Touch
 			</h2>
-			<p className="text-center mb-10 max-w-xl mx-auto">
+			<p className="text-center mb-10 max-w-4xl mx-auto">
 				Ready to start your project or just want to say hello? Send a message
 				and I’ll get back to you ASAP.
 			</p>
