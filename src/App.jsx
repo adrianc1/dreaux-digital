@@ -42,7 +42,7 @@ function App() {
 			<Projects />
 			<Process />
 			<Contact />
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 }
