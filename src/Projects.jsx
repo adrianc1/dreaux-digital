@@ -17,10 +17,10 @@ function Projects() {
 								Retro Win95 OS Portfolio
 							</h3>
 							<p className="text-sm text-gray-600 mb-3">
-								Windows95 OS inspired responsive retro portfolio.
+								Windows98 OS inspired responsive retro portfolio.
 							</p>
 							<a
-								href="https://adriancrosby.netlify.app"
+								href="https://adriancrosby.com"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-blue-500 hover:underline text-sm font-medium"
