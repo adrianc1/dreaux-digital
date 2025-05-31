@@ -7,8 +7,7 @@ function Footer() {
 				© {new Date().getFullYear()} Dreaux Digital. All rights reserved. <br />
 			</p>
 			<p className="copyright text-white my-auto text-sm ">
-				Made by{' '}
-				<a href="https://adriancrosby.netlify.app/" className="underline"></a>{' '}
+				Made by <a href="https://adriancrosby.com" className="underline"></a>{' '}
 				adrian@dreauxdigital.com
 			</p>
 		</div>

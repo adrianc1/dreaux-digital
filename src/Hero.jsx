@@ -1,5 +1,4 @@
 import { IoIosArrowDown } from 'react-icons/io';
-import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Hero() {
 	return (
