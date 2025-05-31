@@ -10,7 +10,7 @@ function Nav({ showNav, onClick, showTitle }) {
 				}`}
 			>
 				<ul
-					className="flex flex-col gap-8 pb-4 pt-4 font-bold"
+					className="flex flex-col gap-8 pb-4 pt-4 font-bold cursor-pointer"
 					onClick={onClick}
 				>
 					<li>

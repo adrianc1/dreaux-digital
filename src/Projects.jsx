@@ -23,7 +23,7 @@ function Projects() {
 								href="https://adriancrosby.com"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-blue-500 hover:underline text-sm font-medium"
+								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
 							>
 								View Project →
 							</a>
@@ -48,7 +48,7 @@ function Projects() {
 								href="https://olivascafe.netlify.app"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-blue-500 hover:underline text-sm font-medium"
+								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
 							>
 								View Project →
 							</a>
@@ -74,7 +74,7 @@ function Projects() {
 								href="https://sportsappdemo.netlify.app"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-blue-500 hover:underline text-sm font-medium"
+								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
 							>
 								View Project →
 							</a>
@@ -99,7 +99,7 @@ function Projects() {
 								href="https://coastalkeyrealty.netlify.app"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-blue-500 hover:underline text-sm font-medium"
+								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
 							>
 								View Project →
 							</a>

@@ -1,4 +1,30 @@
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
+
 function Contact() {
+	const [showMessageSent, setShowMessageSent] = useState(false);
+	const form = useRef();
+
+	function sendEmail(e) {
+		const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+		const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+		const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+		e.preventDefault();
+		emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+			() => {
+				setShowMessageSent(true);
+				form.current.reset();
+			},
+			(error) => {
+				alert('failed to send message, please try again', error.text);
+			}
+		);
+	}
+
+	const closeDialog = () => {
+		setShowMessageSent(false);
+	};
+
 	return (
 		<section
 			id="contact"
@@ -12,12 +38,24 @@ function Contact() {
 				and I’ll get back to you ASAP.
 			</p>
 
+			{showMessageSent && (
+				<div className="message-sent-modal w-3/4 max-w-4xl border-4 px-8 py-16 text-center absolute bg-white mx-auto right-0 left-0">
+					<h3 className="mb-16">
+						Thank you! Your message was successfully sent.
+					</h3>
+					<button
+						className="bg-[#7ddeff] hover:bg-[#5cd8e8] text-black font-semibold px-6 py-3 rounded w-full transition cursor-pointer"
+						onPointerDown={closeDialog}
+					>
+						Okay
+					</button>
+				</div>
+			)}
+
 			<form
+				ref={form}
+				onSubmit={sendEmail}
 				className="space-y-6 max-w-md mx-auto"
-				onSubmit={(e) => {
-					e.preventDefault();
-					alert('Form submission logic here');
-				}}
 			>
 				<div>
 					<label htmlFor="name" className="block mb-2 font-semibold">
@@ -26,6 +64,7 @@ function Contact() {
 					<input
 						id="name"
 						type="text"
+						name="name"
 						required
 						className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#7ddeff]"
 					/>
@@ -38,6 +77,7 @@ function Contact() {
 					<input
 						id="email"
 						type="email"
+						name="email"
 						required
 						className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#7ddeff]"
 					/>
@@ -50,6 +90,7 @@ function Contact() {
 					<textarea
 						id="message"
 						rows="5"
+						name="message"
 						required
 						className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#7ddeff]"
 					/>
@@ -57,7 +98,7 @@ function Contact() {
 
 				<button
 					type="submit"
-					className="bg-[#7ddeff] hover:bg-[#5cd8e8] text-black font-semibold px-6 py-3 rounded w-full transition"
+					className="bg-[#7ddeff] hover:bg-[#5cd8e8] text-black font-semibold px-6 py-3 rounded w-full transition cursor-pointer"
 				>
 					Send Message
 				</button>

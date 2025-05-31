@@ -1,11 +1,11 @@
 function Services() {
 	return (
-		<section id="services" className="bg-black text-white py-16 px-6 w-full">
+		<section id="services" className="bg-black text-white py-16 px-6 w-full ">
 			<div className="max-w-5xl mx-auto">
 				<h2 className="text-4xl font-bold text-center mb-12 text-[#FFD600] uppercase">
 					Services
 				</h2>
-				<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
+				<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12 ">
 					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Digital Strategy & Growth

@@ -8,7 +8,7 @@ function Hero() {
 					<h1 className="title dreaux-title text-[#FFD600] text-7xl font-bold tracking-wider md:text-9xl">
 						DREAUX{' '}
 					</h1>
-					<h2 className="title digital-title tracking-wide text-[#FFD600] text-6xl font-bold md:text-9xl">
+					<h2 className="title digital-title tracking-wide text-[#FFD600] text-6xl font-bold md:text-9xl ">
 						DIGITAL
 					</h2>
 				</div>
@@ -23,7 +23,7 @@ function Hero() {
 					</p>
 				</div>
 				<a href="#services">
-					<button className="bg-[#7ddeff] px-4 py-2 rounded font-semibold hover:bg-[#5CD8E8] transition w-40 mx-auto text-neutral-950 text-center md:w-52 md:py-4">
+					<button className="bg-[#7ddeff] px-4 py-2 rounded font-semibold hover:bg-[#5CD8E8] transition w-40 mx-auto text-neutral-950 text-center md:w-52 md:py-4 cursor-pointer">
 						View Services
 					</button>
 				</a>
