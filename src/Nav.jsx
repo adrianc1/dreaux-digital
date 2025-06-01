@@ -28,7 +28,7 @@ function Nav({ showNav, onClick, showTitle }) {
 				</ul>
 			</div>
 			<div
-				className="text-[#FFD600] font-bold text-2xl transition-opacity duration-300 fixed top-4 px-5 z-51"
+				className="text-[#FFD600] font-bold text-2xl transition-opacity duration-900 fixed top-4 px-5 z-51"
 				style={{ opacity: showTitle ? 1 : 0 }}
 			>
 				DREAUX DIGITAL
