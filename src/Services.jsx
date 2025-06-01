@@ -11,7 +11,7 @@ function Services() {
 					}
 				});
 			},
-			{ threshold: 0.5 }
+			{ threshold: 0.1 }
 		);
 
 		const serviceElements = document.querySelectorAll('.service-card');
@@ -28,8 +28,8 @@ function Services() {
 				<h2 className="text-4xl font-bold text-center mb-12 text-[#FFD600] uppercase">
 					Services
 				</h2>
-				<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
-					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+				<div className="service-container grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
+					<div className="service-card  p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Digital Strategy & Growth
 						</h3>
@@ -39,7 +39,7 @@ function Services() {
 							business grow online.
 						</p>
 					</div>
-					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+					<div className="service-card  p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Web Design & Management
 						</h3>
