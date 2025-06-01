@@ -1,21 +1,27 @@
-const observer = new IntersectionObserver(
-	(entries) => {
-		console.log(entries);
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add('fade-in-element');
-			} else {
-				entry.target.classList.remove('fade-in-element');
-			}
-		});
-	},
-	{ threshold: 0.5 }
-);
-
-const serviceElements = document.querySelectorAll('.service-card');
-serviceElements.forEach((el) => observer.observe(el));
-
+import { useEffect } from 'react';
 function Services() {
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('fade-in-element');
+					} else {
+						entry.target.classList.remove('fade-in-element');
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		const serviceElements = document.querySelectorAll('.service-card');
+		serviceElements.forEach((el) => observer.observe(el));
+
+		// Optional cleanup on unmount
+		return () => {
+			serviceElements.forEach((el) => observer.unobserve(el));
+		};
+	}, []);
 	return (
 		<section id="services" className="bg-black text-white py-16 px-6 w-full ">
 			<div className="max-w-5xl mx-auto">
