@@ -15,11 +15,11 @@ function Hero() {
 
 				<div className="">
 					<h3 className="tagline text-white text-2xl mb-8 md:text-4xl">
-						Turning your ideas into real digital products.
+						Full-service web design and development for your brand
 					</h3>
 					<p className="text-white text-sm md:text-xl">
-						Custom websites and apps built to grow your brand and reach your
-						goals.
+						We handle the tech - from strategy to launch - so you can focus on
+						growing your business.
 					</p>
 				</div>
 				<a href="#services">

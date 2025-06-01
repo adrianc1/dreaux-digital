@@ -8,9 +8,10 @@ function AboutUs() {
 				<img src="/pfp.png" alt="" className="w-1/2 mx-auto mb-8" />
 
 				<p className="mb-6 leading-relaxed">
-					Hi, I’m Adrian — the developer and strategist behind Dreaux. I’m
-					passionate about crafting digital experiences that not only look great
-					but solve real problems and drive results.
+					Hi, I’m Adrian — the developer and strategist behind Dreaux Digital.
+					I’m passionate about crafting digital experiences that not only look
+					great, but <strong>solve real problems</strong> and{' '}
+					<strong>drive results</strong>.
 				</p>
 
 				<p className="mb-6 leading-relaxed">
@@ -22,7 +23,7 @@ function AboutUs() {
 
 				<p className="mb-6 leading-relaxed">
 					Using modern tools and frameworks tailored to each project, I ensure
-					what we build is fast, accessible, and aligned with your goals. Every
+					what is built is fast, accessible, and aligned with your goals. Every
 					project is a chance to create something meaningful — and I’d love to
 					help bring yours to life.
 				</p>

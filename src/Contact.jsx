@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
 function Contact() {
-	const [showMessageSent, setShowMessageSent] = useState(true);
+	const [showMessageSent, setShowMessageSent] = useState(false);
 	const form = useRef();
 
 	function sendEmail(e) {
