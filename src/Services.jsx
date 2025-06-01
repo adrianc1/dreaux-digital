@@ -1,3 +1,20 @@
+const observer = new IntersectionObserver(
+	(entries) => {
+		console.log(entries);
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('fade-in-element');
+			} else {
+				entry.target.classList.remove('fade-in-element');
+			}
+		});
+	},
+	{ threshold: 0.5 }
+);
+
+const serviceElements = document.querySelectorAll('.service-card');
+serviceElements.forEach((el) => observer.observe(el));
+
 function Services() {
 	return (
 		<section id="services" className="bg-black text-white py-16 px-6 w-full ">
@@ -5,7 +22,7 @@ function Services() {
 				<h2 className="text-4xl font-bold text-center mb-12 text-[#FFD600] uppercase">
 					Services
 				</h2>
-				<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12 ">
+				<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
 					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Digital Strategy & Growth

@@ -6,6 +6,28 @@
 html {
 	scroll-behavior: smooth;
 }
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(
+			10px
+		); /* Optional: make it slide up slightly as it fades */
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* --- Your custom classes (see next step) --- */
+.fade-in-element {
+	animation: fadeIn 1s ease-out forwards; /* Apply the animation: name, duration, easing, fill-mode */
+}
+
+/* Example with a delay (optional) */
+.fade-in-delayed {
+	animation: fadeIn 1s ease-out 0.5s forwards; /* 0.5s delay */
+}
 
 body {
 	width: 100vw;
