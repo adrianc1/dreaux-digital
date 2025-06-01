@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
 function Contact() {
-	const [showMessageSent, setShowMessageSent] = useState(false);
+	const [showMessageSent, setShowMessageSent] = useState(true);
 	const form = useRef();
 
 	function sendEmail(e) {
@@ -40,11 +40,11 @@ function Contact() {
 
 			{showMessageSent && (
 				<div className="message-sent-modal w-3/4 max-w-4xl border-4 px-8 py-16 text-center absolute bg-white mx-auto right-0 left-0">
-					<h3 className="mb-16">
+					<h3 className="mb-16 font-bold">
 						Thank you! Your message was successfully sent.
 					</h3>
 					<button
-						className="bg-[#7ddeff] hover:bg-[#5cd8e8] text-black font-semibold px-6 py-3 rounded w-full transition cursor-pointer"
+						className="bg-[#FFD600] hover:bg-[#e8d577] text-black font-semibold px-6 py-3 rounded w-3/4 transition cursor-pointer border-1 border-black"
 						onPointerDown={closeDialog}
 					>
 						Okay
@@ -98,7 +98,7 @@ function Contact() {
 
 				<button
 					type="submit"
-					className="bg-[#7ddeff] hover:bg-[#5cd8e8] text-black font-semibold px-6 py-3 rounded w-full transition cursor-pointer"
+					className="bg-[#FFD600] hover:bg-[#000000] hover:text-[#FFD600] text-black font-semibold px-6 py-3 rounded w-full transition cursor-pointer"
 				>
 					Send Message
 				</button>

@@ -10,7 +10,7 @@ html {
 	from {
 		opacity: 0;
 		transform: translateY(
-			10px
+			40px
 		); /* Optional: make it slide up slightly as it fades */
 	}
 	to {

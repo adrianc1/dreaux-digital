@@ -29,7 +29,7 @@ function Services() {
 					Services
 				</h2>
 				<div className="service-container grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
-					<div className="service-card  p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+					<div className="service-card opacity-0 p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Digital Strategy & Growth
 						</h3>
@@ -39,7 +39,7 @@ function Services() {
 							business grow online.
 						</p>
 					</div>
-					<div className="service-card  p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+					<div className="service-card opacity-0  p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Web Design & Management
 						</h3>
@@ -49,7 +49,7 @@ function Services() {
 							brand shining online.
 						</p>
 					</div>
-					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+					<div className="service-card opacity-0 p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Custom Websites & Apps
 						</h3>
