@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './Home';
 import Blog from './blog/Blog';
 import BlogPost from './blog/BlogPost';
@@ -9,6 +9,8 @@ import Footer from './Footer';
 function App() {
 	const [showNav, setShowNav] = useState(false);
 	const [showTitle, setShowTitle] = useState(false); // for "Dreaux Digital"
+	const isBlogPage =
+		location.pathname === '/blog' || location.pathname.startsWith('/blog/');
 
 	// Toggle menu
 	function toggleNav() {
@@ -18,7 +20,7 @@ function App() {
 	// Listen to scroll and toggle title visibility
 	useEffect(() => {
 		function handleScroll() {
-			if (window.scrollY > 100) {
+			if (isBlogPage || window.scrollY > 100) {
 				setShowTitle(true);
 			} else {
 				setShowTitle(false);
@@ -32,7 +34,12 @@ function App() {
 
 	return (
 		<div className="flex flex-col min-h-screen  ">
-			<Nav onClick={toggleNav} showNav={showNav} showTitle={showTitle} />
+			<Nav
+				onClick={toggleNav}
+				showNav={showNav}
+				showTitle={showTitle}
+				isBlogPage={isBlogPage}
+			/>
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/blog" element={<Blog />} />

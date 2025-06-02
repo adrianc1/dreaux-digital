@@ -14,6 +14,11 @@ body,
 	margin: 0;
 	padding: 0;
 }
+body {
+	width: 100vw;
+	font-family: 'Montserrat', sans-serif;
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -54,7 +59,19 @@ body,
 	animation: fadeX 1s ease-out forwards;
 }
 
-body {
-	width: 100vw;
-	font-family: 'Montserrat', sans-serif;
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.spin-on-hover {
+	display: inline-block;
+}
+
+.spin-on-hover:hover {
+	animation: spin 1s linear infinite;
 }

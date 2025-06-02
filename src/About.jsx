@@ -32,7 +32,7 @@ function AboutUs() {
 				<img
 					src="/pfp.png"
 					alt=""
-					className="pfp w-1/2 mx-auto mb-8 fade-in-x opacity-0"
+					className="pfp w-1/2 mx-auto mb-8  opacity-1 "
 				/>
 
 				<p className="mb-6 leading-relaxed">
