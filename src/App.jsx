@@ -1,13 +1,9 @@
 import { useState, useEffect } from 'react';
-import Services from './Services';
-import Hero from './Hero';
-import AboutUs from './About';
-import Process from './Process';
-import Contact from './Contact';
-import Projects from './Projects';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
+
 import Nav from './Nav';
 import Footer from './Footer';
-import './App.css';
 
 function App() {
 	const [showNav, setShowNav] = useState(false);
@@ -34,15 +30,11 @@ function App() {
 	}, []);
 
 	return (
-		<>
+		<div className="flex flex-col min-h-screen  ">
 			<Nav onClick={toggleNav} showNav={showNav} showTitle={showTitle} />
-			<Hero />
-			<AboutUs />
-			<Services />
-			<Projects />
-			<Process />
-			<Contact />
-		</>
+			<Home />
+			<Footer />
+		</div>
 	);
 }
 

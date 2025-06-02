@@ -25,6 +25,9 @@ function Nav({ showNav, onClick, showTitle }) {
 					<li>
 						<a href="#contact">Contact</a>
 					</li>
+					{/* <li>
+						<a href="#blog">Blog</a>
+					</li> */}
 				</ul>
 			</div>
 			<div

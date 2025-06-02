@@ -5,7 +5,7 @@ function AboutUs() {
 				<h2 className="text-4xl font-bold text-center mb-8">
 					ABOUT DREAUX DIGITAL
 				</h2>
-				<img src="/pfp.png" alt="" className="w-1/2 mx-auto mb-8" />
+				<img src="/pfp.png" alt="" className="w-1/2 mx-auto mb-8 fade-in-x" />
 
 				<p className="mb-6 leading-relaxed">
 					Hi, I’m Adrian — the developer and strategist behind Dreaux Digital.
