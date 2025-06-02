@@ -29,42 +29,38 @@ function Services() {
 					Services
 				</h2>
 				<div className="service-container grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
-					<div className="service-card opacity-0 p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
-							Digital Strategy & Growth
+							Custom Web Design & Development
 						</h3>
 						<p>
-							Crafting tailored digital strategies that drive traffic, engage
-							users, and convert visitors into loyal customers—helping your
-							business grow online.
+							Build a fast, responsive website or web app tailored to your goals
+							— designed to engage users, reflect your brand, and support your
+							growth online.
 						</p>
 					</div>
-					<div className="service-card opacity-0  p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+
+					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
-							Web Design & Management
+							Support & Optimization
 						</h3>
 						<p>
-							Designing responsive, visually striking websites and managing
-							their ongoing updates, performance, and optimization to keep your
-							brand shining online.
+							Stay focused on your business while I keep your site or app
+							updated, optimized, and running smoothly — with flexible support
+							as you grow.
 						</p>
 					</div>
-					<div className="service-card opacity-0 p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
+
+					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
-							Custom Websites & Apps
+							Analytics & Performance
 						</h3>
 						<p>
-							Scalable and performant apps designed to engage users on any
-							device.
+							Turn more visitors into customers by speeding up your site,
+							optimizing user experience, and using data to boost conversions
+							and grow revenue.
 						</p>
 					</div>
-				</div>
-				<div className="text-center">
-					<a href="#contact">
-						<button className="bg-[#7ddeff] text-black font-semibold px-6 py-3 rounded shadow hover:bg-[#5CD8E8] transition">
-							Get Started
-						</button>
-					</a>
 				</div>
 			</div>
 		</section>

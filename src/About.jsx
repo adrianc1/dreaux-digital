@@ -1,31 +1,58 @@
+import { useEffect } from 'react';
+
 function AboutUs() {
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('fade-in-x');
+					} else {
+						entry.target.classList.remove('fade-in-x');
+					}
+				});
+			},
+			{ threshold: 0 }
+		);
+
+		const pfp = document.querySelectorAll('.pfp');
+		pfp.forEach((el) => observer.observe(el));
+
+		// Optional cleanup on unmount
+		return () => {
+			pfp.forEach((el) => observer.unobserve(el));
+		};
+	}, []);
 	return (
 		<section id="about" className="bg-gray-300 text-gray-900 py-16 w-full">
 			<div className="max-w-4xl mx-auto px-6">
 				<h2 className="text-4xl font-bold text-center mb-8">
 					ABOUT DREAUX DIGITAL
 				</h2>
-				<img src="/pfp.png" alt="" className="w-1/2 mx-auto mb-8 fade-in-x" />
+				<img
+					src="/pfp.png"
+					alt=""
+					className="pfp w-1/2 mx-auto mb-8 fade-in-x opacity-0"
+				/>
 
 				<p className="mb-6 leading-relaxed">
-					Hi, I’m Adrian — the developer and strategist behind Dreaux Digital.
-					I’m passionate about crafting digital experiences that not only look
-					great, but <strong>solve real problems</strong> and{' '}
-					<strong>drive results</strong>.
+					Hi, I’m Adrian — the developer behind Dreaux Digital. I help
+					businesses build websites and apps that don’t just look great, but
+					<strong> solve real problems</strong> and{' '}
+					<strong>help drive growth</strong>.
 				</p>
 
 				<p className="mb-6 leading-relaxed">
-					Whether you’re a business aiming to elevate your online presence or
-					someone with an idea for a website or app, I’m here to help bring your
-					vision to life. I work closely with clients of all sizes to turn ideas
-					into thoughtful, scalable digital products.
+					Whether you're just starting out or looking to improve your online
+					presence, I work with you to <strong>bring your ideas to life</strong>
+					. I work closely with clients of all sizes to turn ideas into
+					thoughtful, scalable digital products.
 				</p>
 
 				<p className="mb-6 leading-relaxed">
-					Using modern tools and frameworks tailored to each project, I ensure
-					what is built is fast, accessible, and aligned with your goals. Every
-					project is a chance to create something meaningful — and I’d love to
-					help bring yours to life.
+					I use modern tools and frameworks to build fast, accessible websites
+					tailored to your goals. Every project is a chance to build something
+					meaningful — and I’d love to help with yours.
 				</p>
 			</div>
 		</section>

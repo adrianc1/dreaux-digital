@@ -1,12 +1,8 @@
 import { Link } from 'react-router-dom';
+import { blogData } from './blogData';
 
 export default function Blog() {
-	const posts = [
-		{
-			slug: 'common-website-mistakes-small-business',
-			title: 'Top 5 Reasons Small Business Websites Fail (and Fixes)',
-		},
-	];
+	const posts = blogData;
 
 	return (
 		<section className="p-6 mt-16 flex-1">
