@@ -18,7 +18,7 @@ export default function Home() {
 		}
 	}, [location]);
 	return (
-		<div className="home-container flex-1">
+		<div id="home" className="home-container flex-1">
 			<Hero />
 			<AboutUs />
 			<Services />

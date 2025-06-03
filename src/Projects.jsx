@@ -1,3 +1,7 @@
+import sportsAppImg from './assets/project1.png';
+import realEstateImg from './assets/project2.png';
+import coffeeShopImg from './assets/project3.png';
+import portfolioImg from './assets/project4.png';
 function Projects() {
 	return (
 		<section id="projects" className="bg-white text-gray-900 py-16 w-full">
@@ -8,7 +12,7 @@ function Projects() {
 					{/* Project Card 1 */}
 					<div className="bg-gray-100 rounded-xl shadow overflow-hidden hover:shadow-lg transition">
 						<img
-							src="/project4.png"
+							src={portfolioImg}
 							alt="Retro Portfolio"
 							className="w-full h-56 object-cover object-top rounded-t-xl"
 						/>
@@ -33,8 +37,8 @@ function Projects() {
 					{/* Project Card 2 */}
 					<div className="bg-gray-100 rounded-xl shadow overflow-hidden hover:shadow-lg transition">
 						<img
-							src="/project3.png"
-							alt="Project Portfolio"
+							src={coffeeShopImg}
+							alt="Coffee Shop Screenshot"
 							className="w-full h-56 object-cover object-top rounded-t-xl"
 						/>
 						<div className="p-4">
@@ -58,8 +62,8 @@ function Projects() {
 					{/* Project Card 3 */}
 					<div className="bg-gray-100 rounded-xl shadow overflow-hidden hover:shadow-lg transition">
 						<img
-							src="/project1.png"
-							alt="Project Portfolio"
+							src={sportsAppImg}
+							alt="Sports App Screenshot"
 							className="w-full h-56 object-cover object-top rounded-t-xl"
 						/>
 						<div className="p-4">
@@ -84,7 +88,7 @@ function Projects() {
 					{/* Project Card 4 */}
 					<div className="bg-gray-100 rounded-xl shadow overflow-hidden hover:shadow-lg transition">
 						<img
-							src="/project2.png"
+							src={realEstateImg}
 							alt="Project Portfolio"
 							className="w-full h-56 object-contain object-top rounded-t-xl"
 						/>

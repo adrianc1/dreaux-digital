@@ -23,7 +23,7 @@ body {
 	from {
 		opacity: 0;
 		transform: translateY(
-			40px
+			20px
 		); /* Optional: make it slide up slightly as it fades */
 	}
 	to {

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import pfp from '../src/assets/pfp.png';
 
 function AboutUs() {
 	useEffect(() => {
@@ -29,11 +30,7 @@ function AboutUs() {
 				<h2 className="text-4xl font-bold text-center mb-8">
 					ABOUT DREAUX DIGITAL
 				</h2>
-				<img
-					src="/pfp.png"
-					alt=""
-					className="pfp w-1/2 mx-auto mb-8  opacity-1 "
-				/>
+				<img src={pfp} alt="" className="pfp w-1/2 mx-auto mb-8  opacity-1 " />
 
 				<p className="mb-6 leading-relaxed">
 					Hi, I’m Adrian — the developer behind Dreaux Digital. I help

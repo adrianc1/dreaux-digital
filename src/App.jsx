@@ -38,6 +38,7 @@ function App() {
 				onClick={toggleNav}
 				showNav={showNav}
 				showTitle={showTitle}
+				setShowTitle={setShowTitle}
 				isBlogPage={isBlogPage}
 			/>
 			<Routes>

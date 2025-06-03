@@ -1,7 +1,7 @@
-import imgg from '../../public/pulp-fiction-john-travolta.gif';
-import mobile from '../../public/mobile-phone.jpg';
-import mac from '../../public/mac.jpg';
-import whiteBoard from '../../public/whiteboard.jpg';
+import imgg from '../assets/pulp-fiction-john-travolta.gif';
+import mobile from '../assets/mobile-phone.jpg';
+import mac from '../assets/mac.jpg';
+import whiteBoard from '../assets/whiteboard.jpg';
 
 export const blogData = [
 	{
