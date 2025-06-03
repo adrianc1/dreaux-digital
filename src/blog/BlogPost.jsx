@@ -12,10 +12,11 @@ function BlogPost() {
 		<section className="p-6 flex-1 mt-16 flex flex-col ">
 			<h1 className="text-4xl">{post.title}</h1>
 			<h2 className="py-6">{post.tagline}</h2>
-			<h4 className="pt-2">Date: {post.date}</h4>
-			<h3 className="pb-2">
+			<h3 className="pt-2">
 				Written By: <strong>{post.author}</strong>
 			</h3>
+			<h4 className="">Date: {post.date}</h4>
+
 			<section>{post.content}</section>
 			<section className="mt-12 border-t pt-8 mx-auto w-full flex flex-col justify-center items-center">
 				<h3 className="text-xl font-semibold mb-4">

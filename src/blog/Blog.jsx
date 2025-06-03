@@ -13,6 +13,10 @@ export default function Blog() {
 						<Link to={`/blog/${post.slug}`} className="text-blue-600 underline">
 							{post.title}
 						</Link>
+						<br />
+
+						<br />
+						{post.date}
 					</li>
 				))}
 			</ul>
