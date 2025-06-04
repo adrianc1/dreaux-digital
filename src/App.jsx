@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './Home';
-import Blog from './blog/Blog';
+import Blog from './blog/index.jsx';
 import BlogPost from './blog/BlogPost';
 import Nav from './Nav';
 import Footer from './Footer';
