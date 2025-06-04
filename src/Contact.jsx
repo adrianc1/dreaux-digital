@@ -3,6 +3,8 @@ import { useRef, useState } from 'react';
 
 function Contact() {
 	const [showMessageSent, setShowMessageSent] = useState(false);
+	const [showMessageSending, setShowMessageSending] = useState(false);
+
 	const form = useRef();
 
 	function sendEmail(e) {
@@ -10,9 +12,11 @@ function Contact() {
 		const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 		const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 		e.preventDefault();
+		setShowMessageSending(true);
 		emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
 			() => {
 				setShowMessageSent(true);
+				setShowMessageSending(false);
 				form.current.reset();
 			},
 			(error) => {
@@ -49,6 +53,12 @@ function Contact() {
 					>
 						Okay
 					</button>
+				</div>
+			)}
+
+			{showMessageSending && (
+				<div className="message-sent-modal w-3/4 max-w-4xl border-4 px-8 my-auto text-center absolute bg-white mx-auto right-0 left-0 flex h-36 justify-center items-center">
+					<h3 className="font-bold text-2xl">Message Sending...</h3>
 				</div>
 			)}
 
