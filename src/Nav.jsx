@@ -25,7 +25,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 				} z-30 lg:top-0`}
 			>
 				<ul
-					className="flex flex-col justify-between gap-8 pb-4 pt-4 font-bold cursor-pointer z-1000 lg:flex-row w-[100%] lg:justify-around lg:w-1/2  ml-auto lg:text-white"
+					className="flex flex-col justify-between gap-8 pb-4 pt-4 font-bold cursor-pointer z-1000 lg:flex-row w-[100%] lg:justify-around lg:w-1/2  ml-auto lg:text-white lg:pr-8"
 					onClick={onClick}
 				>
 					<Link to="/#about">
