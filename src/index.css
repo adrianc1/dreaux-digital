@@ -68,8 +68,8 @@ body {
 	}
 }
 
-.spin-on-hover {
-	display: inline-block;
+.spin-pfp {
+	animation: spin 1s ease-out forwards;
 }
 
 .spin-on-hover:hover {
