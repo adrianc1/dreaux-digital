@@ -7,8 +7,8 @@ function AboutUs() {
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						entry.target.classList.add('fade-in-x');
 						entry.target.classList.add('spin');
+						entry.target.classList.add('fade-in-x');
 					} else {
 						entry.target.classList.remove('fade-in-x');
 						entry.target.classList.remove('spin');

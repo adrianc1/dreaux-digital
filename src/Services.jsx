@@ -28,8 +28,8 @@ function Services() {
 				<h2 className="text-4xl font-bold text-center mb-12 text-[#FFD600] uppercase">
 					Services
 				</h2>
-				<div className="service-container grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12">
-					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition opacity-0">
+				<div className="service-container grid gap-10 md:grid-cols-2 lg:grid-cols-3 mb-12 ">
+					<div className="service-card hover:scale-115 p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition opacity-0">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Custom Web Design & Development
 						</h3>
@@ -40,7 +40,7 @@ function Services() {
 						</p>
 					</div>
 
-					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition opacity-0">
+					<div className="service-card hover:scale-115 p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition opacity-0">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Support & Optimization
 						</h3>
@@ -51,7 +51,7 @@ function Services() {
 						</p>
 					</div>
 
-					<div className="service-card p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition opacity-0">
+					<div className="service-card hover:scale-115 p-6 border border-[#FFD600] rounded shadow hover:shadow-lg transition opacity-0">
 						<h3 className="text-2xl font-semibold mb-3 text-[#FFD600]">
 							Analytics & Performance
 						</h3>

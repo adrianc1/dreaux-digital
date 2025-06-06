@@ -27,7 +27,7 @@ body {
 		); /* Optional: make it slide up slightly as it fades */
 	}
 	to {
-		opacity: 1;
+		opacity: 100;
 		transform: translateY(0);
 	}
 }
