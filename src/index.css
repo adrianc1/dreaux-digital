@@ -68,7 +68,7 @@ body {
 	}
 }
 
-.spin-pfp {
+.spin {
 	animation: spin 1s ease-out forwards;
 }
 
