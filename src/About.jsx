@@ -43,14 +43,15 @@ function AboutUs() {
 					ABOUT DREAUX DIGITAL
 				</h2>
 				<div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full  mx-auto">
-					<p className=" w-full text-2xl leading-12 flex-3 px-12">
-						Dreaux Digital builds clean, responsive websites and custom web apps
-						designed to drive traffic and support your growth. We handle the
-						design, development, and ongoing site management—so you can{' '}
+					<p className=" w-full text-2xl leading-12 flex-3 px-8">
+						<span className="font-bold">Dreaux Digital</span> builds clean,
+						responsive websites and custom web apps designed to drive traffic
+						and support your growth. We handle the design, development, and
+						ongoing site management—so you can{' '}
 						<span className="italic underline">focus on your business.</span>
 						<br />
 						<br />
-						<strong>Stress less. Go with Dreaux.</strong>
+						<strong className="no-wrap">Stress less. Go with Dreaux.</strong>
 					</p>
 					<div className="flex-2">
 						<img
