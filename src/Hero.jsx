@@ -19,11 +19,11 @@ function Hero() {
 					</h3>
 					<p className="text-white text-sm md:text-xl">
 						We handle the tech - from strategy to launch - so you can focus on
-						growing your business.
+						<strong> growing your business.</strong>
 					</p>
 				</div>
 				<a href="#services">
-					<button className="bg-[#7ddeff] px-4 py-2 rounded font-semibold hover:bg-[#5CD8E8] transition w-40 mx-auto text-neutral-950 text-center md:w-52 md:py-4 cursor-pointer">
+					<button className="bg-[#7ddeff] px-4 text-lg font-bold py-2 rounded  hover:bg-[#5CD8E8] transition w-45 mx-auto text-neutral-950 text-center md:w-52 md:py-4 cursor-pointer">
 						View Services
 					</button>
 				</a>
