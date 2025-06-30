@@ -37,23 +37,13 @@ function AboutUs() {
 		}, 1000);
 	};
 	return (
-		<section id="about" className="bg-gray-300 text-gray-900 py-16 w-full">
-			<div className="max-w-4xl mx-auto px-6">
+		<section id="about" className="bg-gray-300 text-gray-900 py-16 w-full ">
+			<div className="max-w-6xl mx-auto ">
 				<h2 className="text-4xl font-bold text-center mb-8">
 					ABOUT DREAUX DIGITAL
 				</h2>
-				<div className="flex border-2 border-amber-500 items-center justify-between w-fullxa">
-					<div className="">
-						<img
-							src={pfp}
-							alt=""
-							className={`pfp w-1/3 mx-auto mb-8  opacity-100 ${
-								isSpinning ? 'spin' : ''
-							}`}
-							onPointerDown={handleClick}
-						/>
-					</div>
-					<p className="mb-0 w-full leading-relaxed">
+				<div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full  mx-auto">
+					<p className=" w-full text-2xl leading-12 flex-3 px-12">
 						Dreaux Digital builds clean, responsive websites and custom web apps
 						designed to drive traffic and support your growth. We handle the
 						design, development, and ongoing site management—so you can{' '}
@@ -62,6 +52,16 @@ function AboutUs() {
 						<br />
 						<strong>Stress less. Go with Dreaux.</strong>
 					</p>
+					<div className="flex-2">
+						<img
+							src={pfp}
+							alt=""
+							className={`pfp w-2/3 mx-auto mb-8 opacity-100 md:w-1/3 lg:w-2/3 ${
+								isSpinning ? 'spin' : ''
+							}`}
+							onPointerDown={handleClick}
+						/>
+					</div>
 				</div>
 			</div>
 		</section>
