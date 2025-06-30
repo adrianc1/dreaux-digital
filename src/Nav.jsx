@@ -1,6 +1,7 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoCloseSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
+import logo from './assets/d-logo.jpg';
 
 function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 	return (
