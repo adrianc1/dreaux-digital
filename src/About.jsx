@@ -42,16 +42,18 @@ function AboutUs() {
 				<h2 className="text-4xl font-bold text-center mb-8">
 					ABOUT DREAUX DIGITAL
 				</h2>
-				<div className="flex items-center justify-between w-full">
-					<img
-						src={pfp}
-						alt=""
-						className={`pfp w-1/3 mx-auto mb-8  opacity-100 ${
-							isSpinning ? 'spin' : ''
-						}`}
-						onPointerDown={handleClick}
-					/>
-					<p className="mb-6 leading-relaxed">
+				<div className="flex border-2 border-amber-500 items-center justify-between w-fullxa">
+					<div className="">
+						<img
+							src={pfp}
+							alt=""
+							className={`pfp w-1/3 mx-auto mb-8  opacity-100 ${
+								isSpinning ? 'spin' : ''
+							}`}
+							onPointerDown={handleClick}
+						/>
+					</div>
+					<p className="mb-0 w-full leading-relaxed">
 						Dreaux Digital builds clean, responsive websites and custom web apps
 						designed to drive traffic and support your growth. We handle the
 						design, development, and ongoing site management—so you can{' '}
