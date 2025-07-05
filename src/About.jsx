@@ -48,20 +48,27 @@ function AboutUs() {
 						ABOUT DREAUX DIGITAL
 					</h2>
 					<p className=" w-full text-lg leading-10 flex-2 px-8">
-						Dreaux Digital is a web development studio specializing in crafting
-						modern, responsive, and highly functional front-end solutions.
-						Leveraging expertise in web development, Dreaux Digital partners
-						with businesses and individuals to bring their digital visions to
-						life, from engaging websites to dynamic web applications.
+						Dreaux Digital is a dedicated web development studio specializing in
+						crafting modern, responsive, and highly functional front-end
+						solutions. Leveraging expertise in web development and ongoing
+						digital presence management, Dreaux Digital ensures online assets
+						are optimized and up-to-date,{' '}
+						<strong>allowing you to focus on your core business.</strong> Dreaux
+						Digital partners with businesses and individuals to bring their
+						digital visions to life—from engaging websites to dynamic web
+						applications.
 						<br />
 						<br />
-						At Dreaux Digital, the focus on delivering digital experiences that
-						meet your immediate needs and scale with your future ambitions.
-						Clear communication, meticulous attention to detail, and a
-						commitment to project success are core principles at Dreaux Digital.
+						At Dreaux Digital, the focus is on delivering digital experiences
+						that not only meet immediate needs but also scale with future
+						ambitions. Clear communication, meticulous attention to detail, and
+						a commitment to project success are core principles at Dreaux
+						Digital.
 						<br />
 						<br />
-						<strong className="no-wrap">Stress less. Go with Dreaux.</strong>
+						<span className="no-wrap text-2xl text-center mx-auto">
+							<strong>Stress less. Go with Dreaux.</strong>
+						</span>
 					</p>
 				</div>
 			</div>
