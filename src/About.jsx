@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import pfp from '../src/assets/pfp.png';
-import aboutimg from '../src/assets/aboutimg.jpg';
+import aboutimg from '../src/assets/aboutimg2.jpg';
 
 function AboutUs() {
 	// useEffect(() => {
@@ -47,19 +47,18 @@ function AboutUs() {
 					<h2 className="text-4xl font-bold text-center mb-8">
 						ABOUT DREAUX DIGITAL
 					</h2>
-					<p className=" w-full text-2xl leading-12 flex-2 px-8">
-						Dreaux Digital is a dedicated web development studio specializing in
-						crafting modern, responsive, and highly functional front-end
-						solutions. Leveraging expertise in JavaScript and React, we partner
+					<p className=" w-full text-lg leading-10 flex-2 px-8">
+						Dreaux Digital is a web development studio specializing in crafting
+						modern, responsive, and highly functional front-end solutions.
+						Leveraging expertise in web development, Dreaux Digital partners
 						with businesses and individuals to bring their digital visions to
 						life, from engaging websites to dynamic web applications.
 						<br />
 						<br />
-						At Dreaux Digital, our mission is to deliver digital experiences
-						that not only meet your immediate needs but also scale with your
-						future ambitions. Clear communication, meticulous attention to
-						detail, and a commitment to project success are core principles at
-						Dreaux Digital.
+						At Dreaux Digital, the focus on delivering digital experiences that
+						meet your immediate needs and scale with your future ambitions.
+						Clear communication, meticulous attention to detail, and a
+						commitment to project success are core principles at Dreaux Digital.
 						<br />
 						<br />
 						<strong className="no-wrap">Stress less. Go with Dreaux.</strong>
