@@ -1,5 +1,5 @@
-import sportsAppImg from './assets/project1.png';
-import realEstateImg from './assets/project2.png';
+import sportsAppImg from './assets/laconner.png';
+import resume from './assets/ezresume.png';
 import coffeeShopImg from './assets/project3.png';
 import portfolioImg from './assets/project4.png';
 function Projects() {
@@ -9,6 +9,28 @@ function Projects() {
 				<h2 className="text-4xl font-bold text-center mb-12">PROJECTS</h2>
 
 				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+					{/* Project Card 4 */}
+					<div className="bg-gray-100 rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+						<img
+							src={resume}
+							alt="Project Portfolio"
+							className="w-full h-56 object-contain object-top rounded-t-xl"
+						/>
+						<div className="p-4">
+							<h3 className="text-xl font-semibold mb-2">Resume Builder</h3>
+							<p className="text-sm text-gray-600 mb-3">
+								Easy Resume Builder and Download
+							</p>
+							<a
+								href="https://ezresumebuilder.netlify.app/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
+							>
+								View Project →
+							</a>
+						</div>
+					</div>
 					{/* Project Card 1 */}
 					<div className="bg-gray-100 rounded-xl shadow overflow-hidden hover:shadow-lg transition">
 						<img
@@ -75,32 +97,7 @@ function Projects() {
 								teachers, and students for team information.
 							</p>
 							<a
-								href="https://sportsappdemo.netlify.app"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
-							>
-								View Project →
-							</a>
-						</div>
-					</div>
-
-					{/* Project Card 4 */}
-					<div className="bg-gray-100 rounded-xl shadow overflow-hidden hover:shadow-lg transition">
-						<img
-							src={realEstateImg}
-							alt="Project Portfolio"
-							className="w-full h-56 object-contain object-top rounded-t-xl"
-						/>
-						<div className="p-4">
-							<h3 className="text-xl font-semibold mb-2">
-								Real Estate Website
-							</h3>
-							<p className="text-sm text-gray-600 mb-3">
-								Multipage real estate website
-							</p>
-							<a
-								href="https://coastalkeyrealty.netlify.app"
+								href="https://laconnersportsapp.netlify.app/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
