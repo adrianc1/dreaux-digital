@@ -22,7 +22,7 @@ function Projects() {
 								Easy Resume Builder and Download
 							</p>
 							<a
-								href="https://ezresumepro.netlify.app/"
+								href="https://ezresume.pro/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
