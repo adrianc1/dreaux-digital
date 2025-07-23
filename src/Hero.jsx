@@ -6,7 +6,7 @@ function Hero() {
 			className="hero-container bg-black w-full h-screen text-center px-4 flex flex-col justify-center m-0 p-0"
 			style={{
 				backgroundImage:
-					'linear-gradient(rgba(0, 0, 0,0.8), rgba(0, 0, 0,0.5)), url(./src/assets/hero-bg.jpg)',
+					'linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0,0.5)), url(./src/assets/hero-bg.jpg)',
 				backgroundSize: 'cover',
 				backgroundRepeat: 'no-repeat',
 			}}
@@ -22,9 +22,9 @@ function Hero() {
 				</div>
 
 				<div className="">
-					<h3 className="tagline max-w-6xl mx-auto text-white text-2xl mb-8 md:text-4xl">
-						Web development and management, handling your online presence from
-						strategy to launch, so you can focus on growing your business.
+					<h3 className="tagline max-w-6xl mx-auto text-white text-2xl mb-8 md:text-4xl lg:px-8">
+						Web development and management, so you can focus on growing your
+						business.
 					</h3>
 				</div>
 				<a href="#services">
