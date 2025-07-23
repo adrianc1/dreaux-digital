@@ -1,12 +1,12 @@
 import { IoIosArrowDown } from 'react-icons/io';
+import heroBg from './assets/hero-bg.jpg';
 
 function Hero() {
 	return (
 		<div
 			className="hero-container bg-black w-full h-screen text-center px-4 flex flex-col justify-center m-0 p-0"
 			style={{
-				backgroundImage:
-					'linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0,0.5)), url(./src/assets/hero-bg.jpg)',
+				backgroundImage: `linear-gradient(rgba(0, 0, 0,0.5), rgba(0, 0, 0,0.5)), url(${heroBg})`,
 				backgroundSize: 'cover',
 				backgroundRepeat: 'no-repeat',
 			}}
