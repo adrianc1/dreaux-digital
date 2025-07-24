@@ -9,7 +9,7 @@ function AboutUs() {
 				className="bg-cover bg-center bg-no-repeat w-full h-screen relative"
 				style={{ backgroundImage: `url(${aboutimg})` }}
 			>
-				<div className="absolute top-150 z-10 h-full flex items-end justify-center px-4 pb-16 md:top-20 lg:top-60 lg:items-center lg:left-96">
+				<div className="absolute top-200 sm:top-150 z-10 h-full flex items-end justify-center px-4 pb-16 md:top-20 lg:top-60 lg:items-center lg:left-96">
 					{' '}
 					{/* Changed items-center to items-end and added pb-16 */}
 					<div className="max-w-6xl mx-auto text-center">
@@ -41,7 +41,7 @@ function AboutUs() {
 			</div>
 
 			{/* Yellow background section - made longer */}
-			<div className="bg-[#f1b500] w-full py-72 md:py-12 px-4 lg:hidden">
+			<div className="bg-[#f1b500] w-full py-112 sm:py-96 md:py-72 lg:py-12 px-4 lg:hidden">
 				{' '}
 				{/* Changed py-16 to py-32 for longer section */}
 				<div className="max-w-6xl mx-auto">
