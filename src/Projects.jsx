@@ -1,4 +1,4 @@
-import sportsAppImg from './assets/laconner.png';
+import sportsAppImg from './assets/concretess.png';
 import resume from './assets/ezresume.png';
 import coffeeShopImg from './assets/project3.png';
 import portfolioImg from './assets/project4.png';
@@ -97,7 +97,7 @@ function Projects() {
 								teachers, and students for team information.
 							</p>
 							<a
-								href="https://laconnersportsapp.netlify.app/"
+								href="https://sportsappdemo.netlify.app/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
