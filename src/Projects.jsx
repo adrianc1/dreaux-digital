@@ -97,7 +97,7 @@ function Projects() {
 								teachers, and students for team information.
 							</p>
 							<a
-								href="https://sportsappdemo.netlify.app/"
+								href="https://concretesports.app/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-blue-500 hover:underline text-sm font-medium cursor-pointer"
