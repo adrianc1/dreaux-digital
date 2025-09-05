@@ -11,16 +11,23 @@ function Contact() {
 		const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 		const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 		const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+		console.log('EmailJS Config:', { serviceId, templateId, publicKey });
+
 		e.preventDefault();
 		setShowMessageSending(true);
+
 		emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
-			() => {
+			(result) => {
+				console.log('SUCCESS:', result);
 				setShowMessageSent(true);
 				setShowMessageSending(false);
 				form.current.reset();
 			},
 			(error) => {
-				alert('failed to send message, please try again', error.text);
+				console.error('ERROR:', error);
+				setShowMessageSending(false);
+				alert('failed to send message, please try again: ' + error.text);
 			}
 		);
 	}
