@@ -12,8 +12,6 @@ function Contact() {
 		const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 		const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-		console.log('EmailJS Config:', { serviceId, templateId, publicKey });
-
 		e.preventDefault();
 		setShowMessageSending(true);
 
