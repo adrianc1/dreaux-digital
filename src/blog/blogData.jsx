@@ -1,4 +1,4 @@
-import imgg from '../assets/pulp-fiction-john-travolta.gif';
+// import imgg from '../assets/pulp-fiction-john-travolta.gif';
 import mobile from '../assets/mobile-phone.jpg';
 import mac from '../assets/mac.jpg';
 import whiteBoard from '../assets/whiteboard.jpg';
@@ -40,7 +40,7 @@ export const blogData = [
 					<section className="reason">
 						<h4 className="text-2xl pb-6">1. No Clear Call to Action (CTA)</h4>
 						<img
-							src={imgg}
+							// src={imgg}
 							alt="John Travolta looking around confused"
 							className="pb-6 mx-auto"
 						/>
