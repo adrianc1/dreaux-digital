@@ -70,7 +70,7 @@ function Process() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/40">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
 								How It Works
 							</span>
 						</div>

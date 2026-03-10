@@ -82,7 +82,7 @@ function Services() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/40">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
 								What We Offer
 							</span>
 						</div>
@@ -111,7 +111,7 @@ function Services() {
 								}}
 							>
 								{/* Number */}
-								<span className="svc-num font-bebas text-5xl text-white/10 leading-none pt-1">
+								<span className="svc-num font-bebas text-5xl text-white/40 leading-none pt-1">
 									{s.num}
 								</span>
 
@@ -124,7 +124,7 @@ function Services() {
 										{s.title}
 									</h3>
 									<p
-										className="font-barlow font-light text-white/45 leading-relaxed max-w-xl"
+										className="font-barlow font-light text-white/70 leading-relaxed max-w-xl"
 										style={{ fontSize: 'clamp(13px, 1.1vw, 15px)' }}
 									>
 										{s.desc}
@@ -136,7 +136,7 @@ function Services() {
 									{s.tags.map((tag) => (
 										<span
 											key={tag}
-											className="font-barlow font-light text-[10px] tracking-[0.2em] uppercase text-white/25 border border-white/10 px-2.5 py-1 whitespace-nowrap"
+											className="font-barlow font-light text-[10px] tracking-[0.2em] uppercase text-white/70 border border-white/10 px-2.5 py-1 whitespace-nowrap"
 										>
 											{tag}
 										</span>

@@ -7,7 +7,7 @@ function Hero() {
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,700;1,300&display=swap');
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
-        .title-outline { -webkit-text-stroke: 2px rgba(255,255,255,0.15); color: transparent; }
+        .title-outline { -webkit-text-stroke: 2px rgba(255,255,255,0.6); color: transparent; }
         .clip-cta { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
         .slash-skew { transform: skewX(-8deg); }
         @keyframes fadeSlideUp {
@@ -77,7 +77,7 @@ function Hero() {
 					{/* Label */}
 					<div className="anim-label flex items-center gap-3 mb-6">
 						<span className="dot-pulse w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-						<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/40">
+						<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/60">
 							Web Development &amp; Digital Agency
 						</span>
 					</div>
@@ -93,9 +93,9 @@ function Hero() {
 					</div>
 
 					{/* DIGITAL */}
-					<div className="overflow-hidden leading-none">
+					<div className="overflow-hidden leading-none text-white">
 						<h2
-							className="anim-digital font-bebas title-outline leading-none tracking-wide"
+							className="anim-digital font-bebas title-outline leading-none tracking-wide "
 							style={{ fontSize: 'clamp(80px, 15vw, 200px)' }}
 						>
 							DIGITAL
@@ -123,10 +123,10 @@ function Hero() {
 							View Services
 						</a>
 						<a
-							href="#about"
-							className="font-barlow font-light text-[12px] tracking-[0.18em] uppercase text-white/35 border-b border-white/15 pb-0.5 transition-all duration-200 hover:text-white/75 hover:border-white/40"
+							href="#projects"
+							className="font-barlow font-light text-[12px] tracking-[0.18em] uppercase text-white/55 border-b border-white/45 pb-0.5 transition-all duration-200 hover:text-white/75 hover:border-white/40"
 						>
-							Our Work
+							My Work
 						</a>
 					</div>
 				</div>
@@ -136,8 +136,8 @@ function Hero() {
 					href="#about"
 					className="anim-scroll absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
 				>
-					<div className="scroll-bob w-px h-12 bg-gradient-to-b from-transparent to-white/30" />
-					<span className="font-barlow font-light text-[9px] tracking-[0.4em] uppercase text-white/25">
+					<div className="scroll-bob w-px h-12 bg-gradient-to-b from-transparent to-white/50" />
+					<span className="font-barlow font-light text-[9px] tracking-[0.4em] uppercase text-white/40">
 						Scroll
 					</span>
 				</a>

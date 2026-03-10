@@ -65,7 +65,7 @@ export default function Blog() {
 								style={{ animationDelay: `${i * 0.08}s` }}
 							>
 								{/* Index number — hidden on mobile */}
-								<span className="hidden md:block font-bebas text-white/10 text-3xl leading-none">
+								<span className="hidden md:block font-bebas text-white/40 text-3xl leading-none">
 									{String(i + 1).padStart(2, '0')}
 								</span>
 

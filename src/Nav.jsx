@@ -64,7 +64,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 							<Link
 								key={link.to}
 								to={link.to}
-								className="nav-link-line font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/50 hover:text-white transition-colors duration-200"
+								className="nav-link-line font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/80 hover:text-white transition-colors duration-200"
 							>
 								{link.label}
 							</Link>
@@ -111,7 +111,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 						>
 							<Link
 								to={link.to}
-								className="block py-4 font-barlow font-light text-[12px] tracking-[0.3em] uppercase text-white/50 hover:text-[#FFD600] transition-colors duration-200"
+								className="block py-4 font-barlow font-light text-[12px] tracking-[0.3em] uppercase text-white/75 hover:text-[#FFD600] transition-colors duration-200"
 							>
 								{link.label}
 							</Link>

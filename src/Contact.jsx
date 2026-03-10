@@ -44,7 +44,7 @@ function Contact() {
           outline: none;
           transition: border-color 0.2s ease;
         }
-        .field-input::placeholder { color: rgba(255,255,255,0.2); }
+        .field-input::placeholder { color: rgba(255,255,255,0.5); }
         .field-input:focus { border-color: rgba(255,214,0,0.6); }
         .field-label {
           font-family: 'Barlow', sans-serif;
@@ -52,7 +52,7 @@ function Contact() {
           font-size: 10px;
           letter-spacing: 0.25em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.35);
+          color: rgba(255,255,255,0.5);
           display: block;
           margin-bottom: 6px;
         }
@@ -83,7 +83,7 @@ function Contact() {
 						<div>
 							<div className="flex items-center gap-3 mb-6">
 								<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/40">
+								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
 									Let's Connect
 								</span>
 							</div>
@@ -105,7 +105,7 @@ function Contact() {
 							</div>
 							<div className="divider-anim w-12 h-[2px] bg-[#FFD600] mt-5 mb-8" />
 							<p
-								className="font-barlow font-light text-white/45 max-w-sm leading-relaxed"
+								className="font-barlow font-light text-white/55 max-w-sm leading-relaxed"
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
 								Ready to start your project or just want to say hello? Send a
@@ -114,7 +114,7 @@ function Contact() {
 
 							{/* Decorative detail */}
 							<div className="mt-12 border-l border-[#FFD600]/30 pl-5 space-y-1">
-								<p className="font-bebas text-white/20 text-sm tracking-widest uppercase">
+								<p className="font-bebas text-white/40 text-sm tracking-widest uppercase">
 									Response Time
 								</p>
 								<p className="font-bebas text-[#FFD600] text-2xl tracking-wide">

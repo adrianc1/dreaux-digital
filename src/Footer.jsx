@@ -28,7 +28,7 @@ function Footer() {
 							<p className="font-bebas text-[#FFD600] tracking-widest text-2xl leading-none mb-2">
 								DREAUX DIGITAL
 							</p>
-							<p className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/25">
+							<p className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/45">
 								Web Development &amp; Digital Agency
 							</p>
 						</div>
@@ -39,7 +39,7 @@ function Footer() {
 								<Link
 									key={link.to}
 									to={link.to}
-									className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/30 hover:text-[#FFD600] transition-colors duration-200"
+									className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/50 hover:text-[#FFD600] transition-colors duration-200"
 								>
 									{link.label}
 								</Link>
@@ -49,10 +49,10 @@ function Footer() {
 
 					{/* Bottom row */}
 					<div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/20">
+						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/30">
 							© {new Date().getFullYear()} Dreaux Digital. All rights reserved.
 						</p>
-						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/15">
+						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/30">
 							Built by Dreaux Digital
 						</p>
 					</div>

@@ -67,7 +67,7 @@ function Projects() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/40">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
 								Selected Work
 							</span>
 						</div>
@@ -105,14 +105,14 @@ function Projects() {
 								<div className="p-6">
 									<div className="flex items-start justify-between mb-4">
 										<div>
-											<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-[#FFD600]/60 block mb-1">
+											<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-[#FFD600]/70 block mb-1">
 												{p.tag}
 											</span>
 											<h3 className="font-bebas text-white tracking-wide text-2xl leading-none">
 												{p.title}
 											</h3>
 										</div>
-										<span className="font-bebas text-white/10 text-4xl leading-none ml-4 shrink-0">
+										<span className="font-bebas text-white/40 text-4xl leading-none ml-4 shrink-0">
 											{p.num}
 										</span>
 									</div>
