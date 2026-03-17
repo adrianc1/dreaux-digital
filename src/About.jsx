@@ -43,7 +43,7 @@ function AboutUs() {
 						<div className="absolute bottom-8 left-6 lg:left-10 flex items-center gap-3">
 							<div className="w-px h-10 bg-[#FFD600] opacity-60" />
 							<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-white/40">
-								Est. {new Date().getFullYear()}
+								Est. 2024
 							</span>
 						</div>
 					</div>

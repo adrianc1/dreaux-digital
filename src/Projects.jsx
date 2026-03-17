@@ -1,14 +1,14 @@
 import concretess from './assets/concretess.png';
 import resume from './assets/ezresume.png';
-import portfolioImg from './assets/project4.png';
+import tracerootImg from './assets/traceroot_home.png';
 
 const projects = [
 	{
-		img: resume,
-		title: 'Resume Builder',
+		img: tracerootImg,
+		title: 'TraceRoot',
 		tag: 'Web App',
-		desc: 'Easy resume builder with instant PDF download. Clean UX built for speed.',
-		url: 'https://ezresume.pro/',
+		desc: 'Multi-tenant inventory management platform with role-based access control, designed for regulated cannabis operations.',
+		url: 'https://traceroot.io/',
 		num: '01',
 	},
 	{
@@ -20,11 +20,11 @@ const projects = [
 		num: '02',
 	},
 	{
-		img: portfolioImg,
-		title: 'Win95 Portfolio',
-		tag: 'Portfolio',
-		desc: 'Windows 98-inspired responsive retro portfolio. Fully interactive OS aesthetic.',
-		url: 'https://adriancrosby.com',
+		img: resume,
+		title: 'Resume Builder',
+		tag: 'Web App',
+		desc: 'Easy resume builder with instant PDF download. Clean UX built for speed.',
+		url: 'https://ezresume.pro/',
 		num: '03',
 	},
 ];
