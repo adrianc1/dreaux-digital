@@ -59,7 +59,7 @@ function AboutUs() {
 							<div className="about-anim-1 flex items-center gap-3 mb-8">
 								<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
 								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
-									Who We Are
+									Who I Am
 								</span>
 							</div>
 
@@ -95,10 +95,10 @@ function AboutUs() {
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
 								<p>
-									Dreaux Digital is a dedicated web development studio
+									Dreaux Digital is a solo web development studio
 									specializing in crafting modern, responsive, and highly
-									functional front-end solutions. Leveraging expertise in web
-									development and ongoing digital presence management, we ensure
+									functional front-end solutions. With hands-on expertise in web
+									development and ongoing digital presence management, I ensure
 									your online assets are optimized and up-to-date —
 									<span className="text-white/80 font-normal">
 										{' '}
@@ -106,10 +106,10 @@ function AboutUs() {
 									</span>
 								</p>
 								<p>
-									We partner with businesses and individuals to bring their
+									I partner with businesses and individuals to bring their
 									digital visions to life. Clear communication, meticulous
 									attention to detail, and a commitment to project success are
-									principles we never compromise on.
+									principles I never compromise on.
 								</p>
 							</div>
 
