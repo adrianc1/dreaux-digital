@@ -1,6 +1,6 @@
 import concretess from './assets/concretess.png';
-import resume from './assets/ezresume.png';
 import tracerootImg from './assets/traceroot_home.png';
+import truckfixImg from './assets/truckfix1.png';
 
 const projects = [
 	{
@@ -20,11 +20,11 @@ const projects = [
 		num: '02',
 	},
 	{
-		img: resume,
-		title: 'Resume Builder',
-		tag: 'Web App',
-		desc: 'Easy resume builder with instant PDF download. Clean UX built for speed.',
-		url: 'https://ezresume.pro/',
+		img: truckfixImg,
+		title: 'TruckFix',
+		tag: 'Full Stack App',
+		desc: 'Real-time repair shop finder for truck drivers in distress. Uses geolocation and Google Places API to surface nearby shops — with a Node.js backend and PostgreSQL for caching results.',
+		url: 'https://truckfix.netlify.app/',
 		num: '03',
 	},
 ];
