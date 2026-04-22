@@ -12,7 +12,6 @@ function Footer() {
 	return (
 		<>
 			<style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,700;1,300&display=swap');
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
       `}</style>

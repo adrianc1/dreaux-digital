@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { blogData } from './blogData';
 
 export default function Blog() {
@@ -6,8 +7,12 @@ export default function Blog() {
 
 	return (
 		<>
+			<Helmet>
+				<title>Web Development Blog for Small Businesses | Dreaux Digital</title>
+				<meta name="description" content="Tips, insights, and guides on web development and design for small business owners. Learn what makes a website actually work for your business." />
+				<link rel="canonical" href="https://dreauxdigital.com/blog" />
+			</Helmet>
 			<style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
         .blog-row { transition: background 0.25s ease, border-color 0.25s ease; }

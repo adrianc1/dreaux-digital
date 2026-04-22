@@ -43,7 +43,6 @@ function Services() {
 	return (
 		<>
 			<style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
         .svc-card { transition: border-color 0.3s ease, background 0.3s ease; }

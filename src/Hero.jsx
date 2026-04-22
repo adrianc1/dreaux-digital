@@ -4,7 +4,6 @@ function Hero() {
 	return (
 		<>
 			<style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,700;1,300&display=swap');
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
         .title-outline { -webkit-text-stroke: 2px rgba(255,255,255,0.6); color: transparent; }
@@ -74,6 +73,7 @@ function Hero() {
 
 				{/* Content */}
 				<div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24">
+					<h1 className="sr-only">Freelance Web Developer for Small Businesses | Dreaux Digital</h1>
 					{/* Label */}
 					<div className="anim-label flex items-center gap-3 mb-6">
 						<span className="dot-pulse w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />

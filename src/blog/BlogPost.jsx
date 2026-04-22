@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { blogData } from './blogData';
 
 function BlogPost() {
@@ -30,8 +31,16 @@ function BlogPost() {
 
 	return (
 		<>
+			<Helmet>
+				<title>{post.title} | Dreaux Digital</title>
+				<meta name="description" content={post.tagline} />
+				<link rel="canonical" href={`https://dreauxdigital.com/blog/${post.slug}`} />
+				<meta property="og:title" content={`${post.title} | Dreaux Digital`} />
+				<meta property="og:description" content={post.tagline} />
+				<meta property="og:url" content={`https://dreauxdigital.com/blog/${post.slug}`} />
+				<meta property="og:type" content="article" />
+			</Helmet>
 			<style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
         .clip-cta { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
