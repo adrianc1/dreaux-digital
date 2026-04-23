@@ -24,7 +24,7 @@ const projects = [
 		title: 'TruckFix',
 		tag: 'Full Stack App',
 		desc: 'Real-time repair shop finder for truck drivers in distress. Uses geolocation and Google Places API to surface nearby shops — with a Node.js backend and PostgreSQL for caching results.',
-		url: 'https://truckfix.netlify.app/',
+		url: 'https://trytruckfix.com/',
 		num: '03',
 	},
 ];
