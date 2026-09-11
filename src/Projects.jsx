@@ -121,8 +121,13 @@ function Projects() {
 									</p>
 
 									<div className="flex items-center gap-2 font-barlow font-semibold text-[11px] tracking-[0.2em] uppercase text-[#FFD600]">
-										<span>View Project</span>
-										<span className="project-arrow text-base">↗</span>
+										<span>
+											View Project
+											<span className="sr-only"> (opens in a new tab)</span>
+										</span>
+										<span aria-hidden="true" className="project-arrow text-base">
+											↗
+										</span>
 									</div>
 								</div>
 							</a>

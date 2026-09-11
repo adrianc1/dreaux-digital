@@ -33,7 +33,7 @@ function Footer() {
 						</div>
 
 						{/* Nav links */}
-						<nav className="flex flex-wrap gap-x-8 gap-y-2">
+						<nav aria-label="Footer" className="flex flex-wrap gap-x-8 gap-y-2">
 							{links.map((link) => (
 								<Link
 									key={link.to}

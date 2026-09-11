@@ -1,9 +1,29 @@
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Contact() {
 	const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 	const form = useRef();
+	const sentDialog = useRef(null);
+	const submitBtn = useRef(null);
+
+	// The sent panel covers the form, so move focus into it and let Escape
+	// dismiss it. Focus returns to the submit button on close.
+	useEffect(() => {
+		if (status !== 'sent') return;
+		sentDialog.current?.focus();
+
+		function onKeyDown(e) {
+			if (e.key === 'Escape') setStatus('idle');
+		}
+		document.addEventListener('keydown', onKeyDown);
+		return () => document.removeEventListener('keydown', onKeyDown);
+	}, [status]);
+
+	function dismissSent() {
+		setStatus('idle');
+		submitBtn.current?.focus();
+	}
 
 	function sendEmail(e) {
 		e.preventDefault();
@@ -126,18 +146,28 @@ function Contact() {
 						<div className="relative">
 							{/* Sent modal */}
 							{status === 'sent' && (
-								<div className="modal-anim absolute inset-0 z-20 bg-black border border-[#FFD600]/30 flex flex-col items-center justify-center gap-6 p-10 text-center">
-									<span className="font-bebas text-[#FFD600] text-6xl leading-none">
+								<div
+									ref={sentDialog}
+									role="dialog"
+									aria-modal="true"
+									aria-labelledby="sent-heading"
+									tabIndex={-1}
+									className="modal-anim absolute inset-0 z-20 bg-black border border-[#FFD600]/30 flex flex-col items-center justify-center gap-6 p-10 text-center focus:outline-none"
+								>
+									<span aria-hidden="true" className="font-bebas text-[#FFD600] text-6xl leading-none">
 										✓
 									</span>
-									<h3 className="font-bebas text-white text-3xl tracking-wide">
+									<h3
+										id="sent-heading"
+										className="font-bebas text-white text-3xl tracking-wide"
+									>
 										Message Sent
 									</h3>
 									<p className="font-barlow font-light text-white/70 text-sm">
 										Thanks! I'll be in touch shortly.
 									</p>
 									<button
-										onClick={() => setStatus('idle')}
+										onClick={dismissSent}
 										className="clip-cta font-barlow font-bold text-[11px] tracking-[0.2em] uppercase bg-[#FFD600] text-black px-8 py-3 transition-all duration-200 hover:bg-white cursor-pointer"
 									>
 										Done
@@ -147,9 +177,12 @@ function Contact() {
 
 							{/* Sending overlay */}
 							{status === 'sending' && (
-								<div className="modal-anim absolute inset-0 z-20 bg-black/80 border border-white/20 flex items-center justify-center">
+								<div
+									role="status"
+									className="modal-anim absolute inset-0 z-20 bg-black/80 border border-white/20 flex items-center justify-center"
+								>
 									<div className="flex items-center gap-4">
-										<div className="w-5 h-5 border-2 border-[#FFD600] border-t-transparent rounded-full animate-spin" />
+										<div aria-hidden="true" className="w-5 h-5 border-2 border-[#FFD600] border-t-transparent rounded-full animate-spin" />
 										<span className="font-bebas text-white tracking-widest text-xl">
 											Sending...
 										</span>
@@ -157,7 +190,12 @@ function Contact() {
 								</div>
 							)}
 
-							<form ref={form} onSubmit={sendEmail} className="space-y-8">
+							<form
+								ref={form}
+								onSubmit={sendEmail}
+								inert={status === 'sent' || status === 'sending'}
+								className="space-y-8"
+							>
 								<div>
 									<label className="field-label" htmlFor="name">
 										Name
@@ -199,12 +237,13 @@ function Contact() {
 								</div>
 
 								{status === 'error' && (
-									<p className="font-barlow text-sm text-red-400">
+									<p role="alert" className="font-barlow text-sm text-red-400">
 										Failed to send. Please try again.
 									</p>
 								)}
 
 								<button
+									ref={submitBtn}
 									type="submit"
 									disabled={status === 'sending'}
 									className="clip-cta w-full font-barlow font-bold text-[12px] tracking-[0.2em] uppercase bg-[#FFD600] text-black py-4 transition-all duration-200 hover:bg-white hover:shadow-[0_0_30px_rgba(255,214,0,0.25)] disabled:opacity-50 cursor-pointer"

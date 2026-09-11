@@ -58,7 +58,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 					</Link>
 
 					{/* Desktop links */}
-					<nav className="hidden lg:flex items-center gap-10">
+					<nav aria-label="Main" className="hidden lg:flex items-center gap-10">
 						{navLinks.map((link) => (
 							<Link
 								key={link.to}
@@ -87,6 +87,8 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 						className="lg:hidden text-white text-2xl p-1"
 						onClick={onClick}
 						aria-label="Toggle menu"
+						aria-expanded={showNav}
+						aria-controls="mobile-menu"
 					>
 						{showNav ? <IoCloseSharp /> : <GiHamburgerMenu />}
 					</button>
@@ -95,6 +97,8 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 
 			{/* ── Mobile Dropdown ── */}
 			<div
+				id="mobile-menu"
+				inert={!showNav}
 				className={`lg:hidden fixed left-0 right-0 z-40 bg-black border-b border-white/20 transition-all duration-300 overflow-hidden font-barlow
           ${showNav ? 'top-14 opacity-100' : '-top-full opacity-0 pointer-events-none'}`}
 			>
