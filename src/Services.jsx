@@ -10,7 +10,7 @@ const services = [
 	{
 		num: '02',
 		title: 'Website Management & Support',
-		desc: 'Keep your site current without hiring a full-time developer. Content updates, new pages, promotions, forms, and the small changes that pile up.',
+		desc: 'The work that piles up when nobody owns it: content changes, new pages, seasonal promotions, forms, and the small fixes you keep meaning to get to.',
 		tags: ['Retainer', 'Updates', 'Monitoring'],
 	},
 	{
@@ -206,12 +206,13 @@ function Services() {
 							className="font-bebas text-white leading-none tracking-wide mb-4"
 							style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}
 						>
-							Keep your site current without hiring a developer
+							Keep your site current without managing it yourself
 						</h3>
 						<p className="font-barlow font-light text-body max-w-2xl leading-relaxed mb-10 text-sm">
-							Most businesses don't need a full-time developer. They need
-							someone who answers when something needs changing. Management is
-							scoped per site and quoted after we talk through what you have.
+							For most businesses the website quietly becomes the owner's job,
+							on top of the job they actually have. Management means it stops
+							being something you have to remember. Scoped per site and quoted
+							once we've talked through what you've got.
 						</p>
 
 						<div className="grid md:grid-cols-3 gap-px bg-white/15">
