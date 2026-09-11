@@ -28,7 +28,7 @@ function Footer() {
 								DREAUX DIGITAL
 							</p>
 							<p className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/70">
-								Web Development &amp; Support
+								Web Development &amp; Management
 							</p>
 						</div>
 

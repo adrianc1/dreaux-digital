@@ -77,7 +77,7 @@ function Hero() {
 					<div className="anim-label flex items-center gap-3 mb-5">
 						<span className="dot-pulse w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
 						<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
-							Web Development &amp; Support
+							Web Development &amp; Management
 						</span>
 					</div>
 
