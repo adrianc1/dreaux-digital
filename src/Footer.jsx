@@ -48,11 +48,20 @@ function Footer() {
 
 					{/* Bottom row */}
 					<div className="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/60">
+						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-meta">
 							© {new Date().getFullYear()} Dreaux Digital. All rights reserved.
 						</p>
-						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/60">
-							Built by Dreaux Digital
+						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-meta">
+							Designed &amp; built by{' '}
+							<a
+								href="https://www.linkedin.com/in/adrian-crosby/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-white hover:text-[#FFD600] transition-colors duration-200 underline underline-offset-2 decoration-white/30 hover:decoration-[#FFD600]"
+							>
+								Adrian Crosby
+								<span className="sr-only"> (opens in a new tab)</span>
+							</a>
 						</p>
 					</div>
 				</div>
