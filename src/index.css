@@ -17,6 +17,8 @@ body,
 body {
 	width: 100%;
 	font-family: 'Montserrat', sans-serif;
+	background: #000;
+	color: #fff;
 }
 
 @keyframes fadeIn {
@@ -111,6 +113,11 @@ body {
 	100% {
 		transform: rotate(1turn);
 	}
+}
+
+/* The header is fixed at h-14 (56px); keep anchored sections clear of it. */
+:where(section[id], div[id], main[id]) {
+	scroll-margin-top: 4rem;
 }
 
 /* --- Accessibility --- */
