@@ -1,17 +1,17 @@
 import concretess from './assets/concretess.png';
+import hpcImg from './assets/hpc-hero.jpg';
 import tracerootImg from './assets/traceroot_home.png';
-import truckfixImg from './assets/truckfix1.png';
+import truckfixImg from './assets/truckfixheronew.jpg';
 
 const projects = [
 	{
-		// TODO: screenshot pending — card renders a typographic panel until `img` is set.
-		img: null,
+		img: hpcImg,
 		title: 'Halfpipe · Cannable · HPC',
 		tag: 'Multi-Brand Retail',
-		stat: '$57,600/yr saved',
 		desc: 'Three retail brands, three site builds, three migrations off a single agency. Each one now runs on a site the business owns outright, with no agency retainer.',
-		// TODO: no external link until the Phase 2 case study exists (three sites, one story).
-		url: null,
+		// The card shows HPC, so the link names it rather than implying all three.
+		url: 'https://hpcoxnard.com/',
+		linkLabel: 'Visit HPC Oxnard',
 		num: '01',
 	},
 	{
@@ -94,76 +94,55 @@ function Projects() {
 
 					{/* Cards grid */}
 					<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{projects.map((p) => {
-							const CardTag = p.url ? 'a' : 'div';
-							const linkProps = p.url
-								? { href: p.url, target: '_blank', rel: 'noopener noreferrer' }
-								: {};
-							return (
-								<CardTag
-									key={p.num}
-									{...linkProps}
-									className="project-card card-border group block border border-white/20 bg-white/[0.02] overflow-hidden"
-								>
-									{/* Image, or a typographic panel when none exists yet */}
-									<div className="overflow-hidden h-52 bg-black">
-										{p.img ? (
-											<img
-												src={p.img}
-												alt={p.title}
-												className="project-img w-full h-full object-cover object-top"
-											/>
-										) : (
-											<div className="w-full h-full flex flex-col items-center justify-center gap-3 px-6 text-center border-b border-white/10">
-												<span className="font-bebas text-[#FFD600] leading-none text-4xl tracking-wide">
-													{p.stat}
-												</span>
-												<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-meta">
-													Agency replaced
-												</span>
-											</div>
-										)}
-									</div>
+						{projects.map((p) => (
+							<a
+								key={p.num}
+								href={p.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="project-card card-border group block border border-white/20 bg-white/[0.02] overflow-hidden"
+							>
+								{/* Image */}
+								<div className="overflow-hidden h-52 bg-black">
+									<img
+										src={p.img}
+										alt={p.title}
+										className="project-img w-full h-full object-cover object-top"
+									/>
+								</div>
 
-									{/* Card body */}
-									<div className="p-6">
-										<div className="flex items-start justify-between mb-4">
-											<div>
-												<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-[#FFD600]/70 block mb-1">
-													{p.tag}
-												</span>
-												<h3 className="font-bebas text-white tracking-wide text-2xl leading-none">
-													{p.title}
-												</h3>
-											</div>
-											<span className="font-bebas text-white/55 text-4xl leading-none ml-4 shrink-0">
-												{p.num}
+								{/* Card body */}
+								<div className="p-6">
+									<div className="flex items-start justify-between mb-4">
+										<div>
+											<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-[#FFD600]/70 block mb-1">
+												{p.tag}
 											</span>
+											<h3 className="font-bebas text-white tracking-wide text-2xl leading-none">
+												{p.title}
+											</h3>
 										</div>
-
-										<p className="font-barlow font-light text-sm text-body leading-relaxed mb-5">
-											{p.desc}
-										</p>
-
-										{p.url ? (
-											<div className="flex items-center gap-2 font-barlow font-semibold text-[11px] tracking-[0.2em] uppercase text-[#FFD600]">
-												<span>
-													View Project
-													<span className="sr-only"> (opens in a new tab)</span>
-												</span>
-												<span aria-hidden="true" className="project-arrow text-base">
-													↗
-												</span>
-											</div>
-										) : (
-											<span className="font-barlow font-light text-[11px] tracking-[0.2em] uppercase text-meta">
-												Case study coming soon
-											</span>
-										)}
+										<span className="font-bebas text-white/55 text-4xl leading-none ml-4 shrink-0">
+											{p.num}
+										</span>
 									</div>
-								</CardTag>
-							);
-						})}
+
+									<p className="font-barlow font-light text-sm text-body leading-relaxed mb-5">
+										{p.desc}
+									</p>
+
+									<div className="flex items-center gap-2 font-barlow font-semibold text-[11px] tracking-[0.2em] uppercase text-[#FFD600]">
+										<span>
+											{p.linkLabel || 'View Project'}
+											<span className="sr-only"> (opens in a new tab)</span>
+										</span>
+										<span aria-hidden="true" className="project-arrow text-base">
+											↗
+										</span>
+									</div>
+								</div>
+							</a>
+						))}
 					</div>
 				</div>
 
