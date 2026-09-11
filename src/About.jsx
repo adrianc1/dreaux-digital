@@ -88,12 +88,12 @@ function AboutUs() {
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
 								<p>
-									I&apos;m Adrian — Dreaux Digital is me. I build websites and
+									I&apos;m Adrian, and Dreaux Digital is me. I build websites and
 									web applications for businesses, and I stay on to look after
 									them when that&apos;s what a client needs.
 								</p>
 								<p>
-									The work runs from business websites through to custom software —
+									The work runs from business websites through to custom software,
 									the kind of thing a template can&apos;t do. I also take over sites
 									other people built: moving them off a platform you&apos;ve outgrown,
 									fixing the form that stopped sending, sorting out a domain nobody

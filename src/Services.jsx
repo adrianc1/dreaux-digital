@@ -4,7 +4,7 @@ const services = [
 	{
 		num: '01',
 		title: 'Web Development',
-		desc: 'New business websites, redesigns, landing pages, CMS builds, and custom web applications — built to be fast, maintainable, and yours.',
+		desc: 'New business websites, redesigns, landing pages, CMS builds, and custom web applications, built to be fast, maintainable, and yours.',
 		tags: ['React', 'Full-Stack', 'CMS'],
 	},
 	{
@@ -28,7 +28,7 @@ const services = [
 	{
 		num: '05',
 		title: 'Analytics, SEO & Performance',
-		desc: 'Analytics and Search Console configured properly, technical SEO cleaned up, and pages tuned to load quickly — so you can see what your site is actually doing.',
+		desc: 'Analytics and Search Console configured properly, technical SEO cleaned up, and pages tuned to load quickly, so you can see what your site is actually doing.',
 		tags: ['GA4', 'Technical SEO', 'Speed'],
 	},
 ];
@@ -209,7 +209,7 @@ function Services() {
 							Keep your site current without hiring a developer
 						</h3>
 						<p className="font-barlow font-light text-body max-w-2xl leading-relaxed mb-10 text-sm">
-							Most businesses don't need a full-time developer — they need
+							Most businesses don't need a full-time developer. They need
 							someone who answers when something needs changing. Management is
 							scoped per site and quoted after we talk through what you have.
 						</p>

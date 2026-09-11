@@ -127,7 +127,7 @@ function Contact() {
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
 								Building something new, inheriting a mess, or just need someone
-								to keep the lights on — tell me what you've got and I'll come
+								to keep the lights on. Tell me what you've got and I'll come
 								back with a straight answer.
 							</p>
 

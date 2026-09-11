@@ -4,12 +4,12 @@ const steps = [
 	{
 		num: '01',
 		title: 'Scope & Estimate',
-		desc: 'New build, inherited site, or something broken — we start by establishing what you actually have and what it needs. You get a defined scope and a number before any work begins.',
+		desc: 'New build, inherited site, or something broken. We start by establishing what you actually have and what it needs. You get a defined scope and a number before any work begins.',
 	},
 	{
 		num: '02',
 		title: 'Build or Take Over',
-		desc: 'New projects get built from scratch. Existing ones get audited and brought under control — code, hosting, domains, analytics, and whoever currently holds the keys.',
+		desc: 'New projects get built from scratch. Existing ones get audited and brought under control: code, hosting, domains, analytics, and whoever currently holds the keys.',
 	},
 	{
 		num: '03',

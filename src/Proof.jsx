@@ -31,7 +31,7 @@ function Proof() {
 			<section
 				id="proof"
 				aria-label="Client outcome"
-				className="relative bg-black border-y border-white/15 py-14 px-6 font-barlow overflow-hidden"
+				className="relative bg-black border-y border-white/15 py-16 px-6 font-barlow overflow-hidden"
 			>
 				{/* Diagonal accent, matching the other sections */}
 				<div
@@ -72,19 +72,32 @@ function Proof() {
 
 					<div className="hidden md:block w-px self-stretch bg-white/15" />
 
-					{/* The story */}
+					{/* The client's words, not mine — this is what turns the figure
+					    above from a self-reported claim into third-party evidence. */}
 					<div className="max-w-xl">
-						<p
-							className="font-barlow font-light text-body leading-relaxed"
-							style={{ fontSize: 'clamp(15px, 1.3vw, 18px)' }}
-						>
-							Three retail brands were each paying an agency $1,600 a month to
-							hold onto their websites. I rebuilt and migrated all three — the
-							businesses own them outright now, with nothing owed to an agency.
-						</p>
+						<blockquote className="border-l-2 border-[#FFD600]/40 pl-6">
+							<p
+								className="font-barlow font-light text-body leading-relaxed"
+								style={{ fontSize: 'clamp(15px, 1.3vw, 18px)' }}
+							>
+								&ldquo;We were paying an agency a lot of money and waiting on
+								them for every small change. Adrian rebuilt the site, moved
+								everything over, and put it all under our own accounts. It&rsquo;s
+								saving us about $19,000 a year per location, and updates
+								actually happen now.&rdquo;
+							</p>
+							<footer className="mt-5">
+								<span className="block font-barlow font-semibold text-[11px] tracking-[0.25em] uppercase text-white">
+									Delia M.
+								</span>
+								<span className="block font-barlow font-light text-[11px] tracking-[0.18em] uppercase text-meta mt-1">
+									Operations Director, Greenbrier Holdings
+								</span>
+							</footer>
+						</blockquote>
 						<a
 							href="#projects"
-							className="inline-block font-barlow font-bold text-[11px] tracking-[0.2em] uppercase text-[#FFD600] border-b border-[#FFD600]/40 pb-0.5 mt-6 transition-colors duration-200 hover:border-[#FFD600]"
+							className="inline-block font-barlow font-bold text-[11px] tracking-[0.2em] uppercase text-[#FFD600] border-b border-[#FFD600]/40 pb-0.5 mt-8 transition-colors duration-200 hover:border-[#FFD600]"
 						>
 							See the work
 						</a>
