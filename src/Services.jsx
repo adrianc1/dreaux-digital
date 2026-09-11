@@ -3,21 +3,68 @@ import { useEffect, useRef } from 'react';
 const services = [
 	{
 		num: '01',
-		title: 'Custom Web Design & Development',
-		desc: 'Build a fast, responsive website or web app tailored to your goals — designed to engage users, reflect your brand, and support your growth online.',
-		tags: ['React', 'UI/UX', 'Responsive'],
+		title: 'Web Development',
+		desc: 'New business websites, redesigns, landing pages, CMS builds, and custom web applications — built to be fast, maintainable, and yours.',
+		tags: ['React', 'Full-Stack', 'CMS'],
 	},
 	{
 		num: '02',
-		title: 'Support & Optimization',
-		desc: 'Stay focused on your business while I keep your site or app updated, optimized, and running smoothly — with flexible support as you grow.',
-		tags: ['Maintenance', 'Updates', 'Monitoring'],
+		title: 'Website Management & Support',
+		desc: 'Keep your site current without hiring a full-time developer. Content updates, new pages, promotions, forms, and the small changes that pile up.',
+		tags: ['Retainer', 'Updates', 'Monitoring'],
 	},
 	{
 		num: '03',
-		title: 'Analytics & Performance',
-		desc: 'Turn more visitors into customers by speeding up your site, optimizing user experience, and using data to boost conversions and grow revenue.',
-		tags: ['SEO', 'Speed', 'Conversion'],
+		title: 'Technical Support & Troubleshooting',
+		desc: 'Already have a site? I can take it from here. Broken pages, failing forms, JavaScript errors, DNS and domain problems, integrations that stopped working.',
+		tags: ['Takeover', 'Debugging', 'DNS'],
+	},
+	{
+		num: '04',
+		title: 'Migrations & Launches',
+		desc: 'Moving platforms or hosts without losing traffic. CMS migrations, redirect mapping, DNS cutovers, Search Console setup, and a clean production launch.',
+		tags: ['CMS', 'Redirects', 'Search Console'],
+	},
+	{
+		num: '05',
+		title: 'Analytics, SEO & Performance',
+		desc: 'Analytics and Search Console configured properly, technical SEO cleaned up, and pages tuned to load quickly — so you can see what your site is actually doing.',
+		tags: ['GA4', 'Technical SEO', 'Speed'],
+	},
+];
+
+const managementTiers = [
+	{
+		name: 'Essential',
+		for: 'Brochure sites',
+		includes: [
+			'Content and image updates',
+			'Plugin, package and security updates',
+			'Uptime monitoring',
+			'Response within two business days',
+		],
+	},
+	{
+		name: 'Ongoing',
+		for: 'Most businesses',
+		includes: [
+			'Everything in Essential',
+			'New pages, forms and promotions',
+			'Minor design and layout changes',
+			'Analytics and Search Console upkeep',
+			'Next business day response',
+		],
+	},
+	{
+		name: 'Priority',
+		for: 'Multi-site & revenue-critical',
+		includes: [
+			'Everything in Ongoing',
+			'Multiple sites under one arrangement',
+			'Feature work and integrations',
+			'Same business day response',
+			'Direct line for urgent issues',
+		],
 	},
 ];
 
@@ -81,8 +128,8 @@ function Services() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
-								What I Offer
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
+								Build &middot; Manage &middot; Fix
 							</span>
 						</div>
 						<div className="overflow-hidden">
@@ -147,14 +194,64 @@ function Services() {
 						<div className="border-t border-white/20" />
 					</div>
 
+					{/* Management scope — described by what's included, not by price */}
+					<div className="mt-20">
+						<div className="flex items-center gap-3 mb-6">
+							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
+								Ongoing Management
+							</span>
+						</div>
+						<h3
+							className="font-bebas text-white leading-none tracking-wide mb-4"
+							style={{ fontSize: 'clamp(28px, 3.5vw, 44px)' }}
+						>
+							Keep your site current without hiring a developer
+						</h3>
+						<p className="font-barlow font-light text-body max-w-2xl leading-relaxed mb-10 text-sm">
+							Most businesses don't need a full-time developer — they need
+							someone who answers when something needs changing. Management is
+							scoped per site and quoted after we talk through what you have.
+						</p>
+
+						<div className="grid md:grid-cols-3 gap-px bg-white/15">
+							{managementTiers.map((tier) => (
+								<div key={tier.name} className="bg-black p-7">
+									<p className="font-bebas text-[#FFD600] tracking-wide text-xl mb-1">
+										{tier.name}
+									</p>
+									<p className="font-barlow font-light text-meta text-[11px] tracking-[0.2em] uppercase mb-5">
+										{tier.for}
+									</p>
+									<ul className="space-y-2.5">
+										{tier.includes.map((item) => (
+											<li
+												key={item}
+												className="font-barlow font-light text-body text-sm leading-relaxed flex gap-3"
+											>
+												<span aria-hidden="true" className="text-[#FFD600] shrink-0">
+													&#47;
+												</span>
+												{item}
+											</li>
+										))}
+									</ul>
+								</div>
+							))}
+						</div>
+						<p className="font-barlow font-light text-meta text-[11px] tracking-[0.2em] uppercase mt-6">
+							All tiers quoted per site &middot; No long-term contract
+						</p>
+					</div>
+
 					{/* CTA strip */}
 					<div className="mt-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 border border-[#FFD600]/20 bg-[#FFD600]/[0.03]">
 						<div>
 							<p className="font-bebas text-white tracking-wide text-2xl mb-1">
-								Ready to get started?
+								Building something, or fixing something?
 							</p>
-							<p className="font-barlow font-light text-white/70 text-sm">
-								Let's build something worth seeing.
+							<p className="font-barlow font-light text-body text-sm">
+								Either way, you'll be talking to the person who does the work.
 							</p>
 						</div>
 						<a

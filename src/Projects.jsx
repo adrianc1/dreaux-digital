@@ -4,28 +4,39 @@ import truckfixImg from './assets/truckfix1.png';
 
 const projects = [
 	{
-		img: tracerootImg,
-		title: 'TraceRoot',
-		tag: 'Web App',
-		desc: 'Multi-tenant inventory management platform with role-based access control, designed for regulated cannabis operations.',
-		url: 'https://traceroot.io/',
+		// TODO: screenshot pending — card renders a typographic panel until `img` is set.
+		img: null,
+		title: 'Halfpipe · Cannable · HPC',
+		tag: 'Multi-Brand Retail',
+		stat: '$57,600/yr saved',
+		desc: 'Three retail brands, three site builds, three migrations off a single agency — each one now running on a site the business owns outright, with no agency retainer.',
+		// TODO: no external link until the Phase 2 case study exists (three sites, one story).
+		url: null,
 		num: '01',
 	},
 	{
 		img: concretess,
-		title: 'Sports PWA',
+		title: 'Concrete Sports',
 		tag: 'Progressive Web App',
-		desc: 'High school sports hub for parents, teachers & students — team info, schedules, and more in one place.',
+		desc: 'High school sports hub for parents, teachers and students — schedules, scores and team info in one installable app. Now in its second year on a renewed agreement.',
 		url: 'https://concretesports.app/',
 		num: '02',
 	},
 	{
 		img: truckfixImg,
 		title: 'TruckFix',
-		tag: 'Full Stack App',
-		desc: 'Real-time repair shop finder for truck drivers in distress. Uses geolocation and Google Places API to surface nearby shops — with a Node.js backend and PostgreSQL for caching results.',
+		tag: 'Full-Stack App',
+		desc: 'Finds a truck driver the nearest repair shop when they break down — live location, real inventory of nearby shops, built to answer in seconds on a bad connection.',
 		url: 'https://trytruckfix.com/',
 		num: '03',
+	},
+	{
+		img: tracerootImg,
+		title: 'TraceRoot',
+		tag: 'SaaS Platform',
+		desc: 'Inventory platform serving multiple businesses at once, each seeing only their own data. Staff permissions, a full audit trail, subscription billing, and plain-English search across inventory.',
+		url: 'https://traceroot.io/',
+		num: '04',
 	},
 ];
 
@@ -66,7 +77,7 @@ function Projects() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
 								Selected Work
 							</span>
 						</div>
@@ -83,55 +94,76 @@ function Projects() {
 
 					{/* Cards grid */}
 					<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{projects.map((p) => (
-							<a
-								key={p.num}
-								href={p.url}
-								target="_blank"
-								rel="noopener noreferrer"
-								className="project-card card-border group block border border-white/20 bg-white/[0.02] overflow-hidden"
-							>
-								{/* Image */}
-								<div className="overflow-hidden h-52 bg-black">
-									<img
-										src={p.img}
-										alt={p.title}
-										className="project-img w-full h-full object-cover object-top"
-									/>
-								</div>
+						{projects.map((p) => {
+							const CardTag = p.url ? 'a' : 'div';
+							const linkProps = p.url
+								? { href: p.url, target: '_blank', rel: 'noopener noreferrer' }
+								: {};
+							return (
+								<CardTag
+									key={p.num}
+									{...linkProps}
+									className="project-card card-border group block border border-white/20 bg-white/[0.02] overflow-hidden"
+								>
+									{/* Image, or a typographic panel when none exists yet */}
+									<div className="overflow-hidden h-52 bg-black">
+										{p.img ? (
+											<img
+												src={p.img}
+												alt={p.title}
+												className="project-img w-full h-full object-cover object-top"
+											/>
+										) : (
+											<div className="w-full h-full flex flex-col items-center justify-center gap-3 px-6 text-center border-b border-white/10">
+												<span className="font-bebas text-[#FFD600] leading-none text-4xl tracking-wide">
+													{p.stat}
+												</span>
+												<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-meta">
+													Agency replaced
+												</span>
+											</div>
+										)}
+									</div>
 
-								{/* Card body */}
-								<div className="p-6">
-									<div className="flex items-start justify-between mb-4">
-										<div>
-											<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-[#FFD600]/70 block mb-1">
-												{p.tag}
+									{/* Card body */}
+									<div className="p-6">
+										<div className="flex items-start justify-between mb-4">
+											<div>
+												<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-[#FFD600]/70 block mb-1">
+													{p.tag}
+												</span>
+												<h3 className="font-bebas text-white tracking-wide text-2xl leading-none">
+													{p.title}
+												</h3>
+											</div>
+											<span className="font-bebas text-white/55 text-4xl leading-none ml-4 shrink-0">
+												{p.num}
 											</span>
-											<h3 className="font-bebas text-white tracking-wide text-2xl leading-none">
-												{p.title}
-											</h3>
 										</div>
-										<span className="font-bebas text-white/55 text-4xl leading-none ml-4 shrink-0">
-											{p.num}
-										</span>
-									</div>
 
-									<p className="font-barlow font-light text-sm text-white/75 leading-relaxed mb-5">
-										{p.desc}
-									</p>
+										<p className="font-barlow font-light text-sm text-body leading-relaxed mb-5">
+											{p.desc}
+										</p>
 
-									<div className="flex items-center gap-2 font-barlow font-semibold text-[11px] tracking-[0.2em] uppercase text-[#FFD600]">
-										<span>
-											View Project
-											<span className="sr-only"> (opens in a new tab)</span>
-										</span>
-										<span aria-hidden="true" className="project-arrow text-base">
-											↗
-										</span>
+										{p.url ? (
+											<div className="flex items-center gap-2 font-barlow font-semibold text-[11px] tracking-[0.2em] uppercase text-[#FFD600]">
+												<span>
+													View Project
+													<span className="sr-only"> (opens in a new tab)</span>
+												</span>
+												<span aria-hidden="true" className="project-arrow text-base">
+													↗
+												</span>
+											</div>
+										) : (
+											<span className="font-barlow font-light text-[11px] tracking-[0.2em] uppercase text-meta">
+												Case study coming soon
+											</span>
+										)}
 									</div>
-								</div>
-							</a>
-						))}
+								</CardTag>
+							);
+						})}
 					</div>
 				</div>
 

@@ -3,23 +3,23 @@ import { useEffect, useRef } from 'react';
 const steps = [
 	{
 		num: '01',
-		title: 'Discovery & Strategy',
-		desc: 'Understanding your goals, audience, and challenges to create a tailored plan before a single line of code is written.',
+		title: 'Scope & Estimate',
+		desc: 'New build, inherited site, or something broken — we start by establishing what you actually have and what it needs. You get a defined scope and a number before any work begins.',
 	},
 	{
 		num: '02',
-		title: 'Design & Development',
-		desc: 'Crafting clean, functional designs and building them with modern technologies that actually perform.',
+		title: 'Build or Take Over',
+		desc: 'New projects get built from scratch. Existing ones get audited and brought under control — code, hosting, domains, analytics, and whoever currently holds the keys.',
 	},
 	{
 		num: '03',
-		title: 'Testing & Launch',
-		desc: 'Rigorous testing to ensure performance and accessibility before going live — no surprises on launch day.',
+		title: 'Launch & Verify',
+		desc: 'Redirects mapped, DNS cut over, Search Console and analytics configured, performance and accessibility checked. Migrations happen without losing traffic.',
 	},
 	{
 		num: '04',
-		title: 'Support & Iteration',
-		desc: 'Ongoing maintenance and updates to keep your digital products running at their best as you grow.',
+		title: 'Stay On',
+		desc: 'Most clients keep me on afterward for updates, fixes and new work. Same developer who built it, still answering the phone a year later.',
 	},
 ];
 
@@ -69,8 +69,8 @@ function Process() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
-								How It Works
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
+								New Builds &amp; Takeovers
 							</span>
 						</div>
 						<div className="overflow-hidden">
@@ -114,7 +114,7 @@ function Process() {
 										{step.title}
 									</h3>
 									<p
-										className="font-barlow font-light text-white/75 leading-relaxed"
+										className="font-barlow font-light text-body leading-relaxed"
 										style={{ fontSize: 'clamp(13px, 1.1vw, 15px)' }}
 									>
 										{step.desc}

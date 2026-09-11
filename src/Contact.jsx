@@ -64,6 +64,11 @@ function Contact() {
           transition: border-color 0.2s ease;
         }
         .field-input::placeholder { color: rgba(255,255,255,0.7); }
+        select.field-input { color: #fff; cursor: pointer; -webkit-appearance: none; appearance: none;
+          background-image: linear-gradient(45deg, transparent 50%, #FFD600 50%), linear-gradient(135deg, #FFD600 50%, transparent 50%);
+          background-position: calc(100% - 14px) calc(50% - 2px), calc(100% - 8px) calc(50% - 2px);
+          background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 28px; }
+        select.field-input option { background: #000; color: #fff; }
         .field-input:focus { border-color: rgba(255,214,0,0.6); }
         .field-label {
           font-family: 'Barlow', sans-serif;
@@ -102,33 +107,28 @@ function Contact() {
 						<div>
 							<div className="flex items-center gap-3 mb-6">
 								<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
+								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
 									Let's Connect
 								</span>
 							</div>
-							<div className="overflow-hidden mb-1">
-								<h2
-									className="font-bebas text-white leading-none tracking-wide"
-									style={{ fontSize: 'clamp(52px, 8vw, 110px)' }}
-								>
-									GET IN
-								</h2>
-							</div>
 							<div className="overflow-hidden">
 								<h2
-									className="font-bebas text-[#FFD600] leading-none tracking-wide"
+									id="contact-heading"
+									className="font-bebas leading-none tracking-wide"
 									style={{ fontSize: 'clamp(52px, 8vw, 110px)' }}
 								>
-									TOUCH
+									<span className="block text-white">GET IN</span>
+									<span className="block text-[#FFD600]">TOUCH</span>
 								</h2>
 							</div>
 							<div className="divider-anim w-12 h-[2px] bg-[#FFD600] mt-5 mb-8" />
 							<p
-								className="font-barlow font-light text-white/75 max-w-sm leading-relaxed"
+								className="font-barlow font-light text-body max-w-sm leading-relaxed"
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
-								Ready to start your project or just want to say hello? Send a
-								message and I'll get back to you ASAP.
+								Building something new, inheriting a mess, or just need someone
+								to keep the lights on — tell me what you've got and I'll come
+								back with a straight answer.
 							</p>
 
 							{/* Decorative detail */}
@@ -221,6 +221,36 @@ function Contact() {
 										placeholder="your@email.com"
 										className="field-input"
 									/>
+								</div>
+								<div>
+									<label className="field-label" htmlFor="need">
+										What do you need?
+									</label>
+									<select
+										id="need"
+										name="need"
+										required
+										defaultValue=""
+										className="field-input"
+									>
+										<option value="" disabled>
+											Select one
+										</option>
+										<option value="New website">New website</option>
+										<option value="Take over an existing site">
+											Take over an existing site
+										</option>
+										<option value="Fix something broken">
+											Fix something broken
+										</option>
+										<option value="Ongoing management">
+											Ongoing management
+										</option>
+										<option value="Custom application">
+											Custom application
+										</option>
+										<option value="Something else">Something else</option>
+									</select>
 								</div>
 								<div>
 									<label className="field-label" htmlFor="message">
