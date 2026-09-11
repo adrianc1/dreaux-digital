@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# full-res image masters, kept locally only
+src/assets/*-HERO.png
+src/assets/truckfixheronew.png
