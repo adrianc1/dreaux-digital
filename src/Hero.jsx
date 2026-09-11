@@ -39,7 +39,7 @@ function Hero() {
         .scroll-bob   { animation: scrollBob 2s ease-in-out infinite; }
       `}</style>
 
-			<div className="relative w-full h-screen bg-black overflow-hidden flex items-center">
+			<div className="relative w-full md:min-h-screen bg-black overflow-hidden flex items-center pt-24 pb-16 md:py-0">
 				{/* Background photo */}
 				<div
 					className="absolute inset-0 bg-cover bg-center grayscale opacity-20"
@@ -73,71 +73,65 @@ function Hero() {
 
 				{/* Content */}
 				<div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-16 lg:px-24">
-					<h1 className="sr-only">Freelance Web Developer for Small Businesses | Dreaux Digital</h1>
 					{/* Label */}
-					<div className="anim-label flex items-center gap-3 mb-6">
+					<div className="anim-label flex items-center gap-3 mb-5">
 						<span className="dot-pulse w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-						<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/60">
-							Web Development &amp; Design
+						<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
+							Web Development &amp; Support
 						</span>
 					</div>
 
-					{/* DREAUX */}
-					<div className="overflow-hidden leading-none mb-1">
-						<h1
-							className="anim-dreaux font-bebas text-[#FFD600] leading-none tracking-wide"
-							style={{ fontSize: 'clamp(80px, 15vw, 200px)' }}
-						>
-							DREAUX
-						</h1>
-					</div>
+					{/* Wordmark */}
+					<p className="anim-label font-bebas text-[#FFD600] tracking-[0.2em] text-2xl md:text-[40px] leading-none mb-4">
+						DREAUX DIGITAL
+					</p>
 
-					{/* DIGITAL */}
-					<div className="overflow-hidden leading-none text-white">
-						<h2
-							className="anim-digital font-bebas title-outline leading-none tracking-wide "
-							style={{ fontSize: 'clamp(80px, 15vw, 200px)' }}
-						>
-							DIGITAL
-						</h2>
-					</div>
+					{/* Positioning headline */}
+					<h1
+						className="anim-dreaux font-bebas text-white leading-[0.95] tracking-wide"
+						style={{ fontSize: 'clamp(42px, 6.5vw, 88px)' }}
+					>
+						<span className="block">Websites, web apps,</span>
+						<span className="block">and the technical</span>
+						<span className="block">support to keep</span>
+						<span className="block text-[#FFD600]">them running.</span>
+					</h1>
 
 					{/* Divider */}
 					<div className="anim-divider w-16 h-[2px] bg-[#FFD600] my-7 md:my-9" />
 
 					{/* Tagline */}
 					<p
-						className="anim-tagline font-barlow font-light text-white/50 max-w-sm leading-relaxed"
+						className="anim-tagline font-barlow font-light text-body max-w-md leading-relaxed"
 						style={{ fontSize: 'clamp(14px, 1.4vw, 19px)' }}
 					>
-						Web development and management, so you can focus on growing your
-						business.
+						One developer, start to finish. No agency runaround.
 					</p>
 
 					{/* CTA */}
-					<div className="anim-cta flex items-center gap-8 mt-10">
+					<div className="anim-cta flex flex-wrap items-center gap-x-8 gap-y-4 mt-10">
 						<a
-							href="#services"
+							href="#contact"
 							className="clip-cta font-barlow font-bold text-[12px] tracking-[0.2em] uppercase bg-[#FFD600] text-black px-9 py-4 transition-all duration-200 hover:bg-white hover:shadow-[0_0_40px_rgba(255,214,0,0.35)] hover:-translate-y-0.5"
 						>
-							View Services
+							Start a Project
 						</a>
 						<a
-							href="#projects"
-							className="font-barlow font-light text-[12px] tracking-[0.18em] uppercase text-white/55 border-b border-white/45 pb-0.5 transition-all duration-200 hover:text-white/75 hover:border-white/40"
+							href="#services"
+							className="font-barlow font-light text-[12px] tracking-[0.18em] uppercase text-body border-b border-white/60 pb-0.5 transition-all duration-200 hover:text-white hover:border-white/70"
 						>
-							My Work
+							Already have a site? &rarr;
 						</a>
 					</div>
 				</div>
 
 				{/* Scroll indicator */}
 				<a
-					href="#about"
-					className="anim-scroll absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
+					href="#proof"
+					className="anim-scroll absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 z-10"
 				>
 					<div className="scroll-bob w-px h-12 bg-gradient-to-b from-transparent to-white/50" />
-					<span className="font-barlow font-light text-[9px] tracking-[0.4em] uppercase text-white/40">
+					<span className="font-barlow font-light text-[9px] tracking-[0.4em] uppercase text-white/70">
 						Scroll
 					</span>
 				</a>

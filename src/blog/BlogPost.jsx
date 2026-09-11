@@ -14,8 +14,8 @@ function BlogPost() {
 		return (
 			<div className="min-h-screen bg-black flex items-center justify-center">
 				<div className="text-center">
-					<p className="font-bebas text-white/20 text-8xl">404</p>
-					<p className="font-barlow font-light text-white/40 text-sm tracking-widest uppercase mt-2">
+					<p className="font-bebas text-white/55 text-8xl">404</p>
+					<p className="font-barlow font-light text-white/70 text-sm tracking-widest uppercase mt-2">
 						Post not found
 					</p>
 					<Link
@@ -105,7 +105,7 @@ function BlogPost() {
 					<div className="anim-1 mb-12">
 						<Link
 							to="/blog"
-							className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/30 hover:text-[#FFD600] transition-colors duration-200 inline-flex items-center gap-2"
+							className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/70 hover:text-[#FFD600] transition-colors duration-200 inline-flex items-center gap-2"
 						>
 							<span>←</span> All Posts
 						</Link>
@@ -115,13 +115,13 @@ function BlogPost() {
 					<header className="mb-12">
 						<div className="anim-1 flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/40">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
 								{post.date}
 							</span>
 							{post.author && (
 								<>
-									<span className="text-white/15 text-xs">·</span>
-									<span className="font-barlow font-light text-[11px] tracking-[0.2em] uppercase text-white/30">
+									<span className="text-white/40 text-xs">·</span>
+									<span className="font-barlow font-light text-[11px] tracking-[0.2em] uppercase text-white/60">
 										{post.author}
 									</span>
 								</>
@@ -139,7 +139,7 @@ function BlogPost() {
 
 						{post.tagline && (
 							<p
-								className="anim-3 font-barlow font-light text-white/45 leading-relaxed mt-3"
+								className="anim-3 font-barlow font-light text-white/75 leading-relaxed mt-3"
 								style={{ fontSize: 'clamp(15px, 1.4vw, 18px)' }}
 							>
 								{post.tagline}
@@ -166,7 +166,7 @@ function BlogPost() {
 							Ready to fix what's holding your website back?
 						</p>
 						<p
-							className="font-barlow font-light text-white/40 leading-relaxed mb-7"
+							className="font-barlow font-light text-white/75 leading-relaxed mb-7"
 							style={{ fontSize: 'clamp(13px, 1.1vw, 15px)' }}
 						>
 							Whether your site needs a full redesign or just a few strategic
@@ -183,15 +183,15 @@ function BlogPost() {
 
 					{/* Prev / Next nav */}
 					{(prevPost || nextPost) && (
-						<div className="mt-12 grid grid-cols-2 gap-4 border-t border-white/10 pt-10">
+						<div className="mt-12 grid grid-cols-2 gap-4 border-t border-white/20 pt-10">
 							<div>
 								{prevPost && (
 									<Link to={`/blog/${prevPost.slug}`} className="group block">
-										<span className="font-barlow font-light text-[10px] tracking-[0.25em] uppercase text-white/25 block mb-2">
+										<span className="font-barlow font-light text-[10px] tracking-[0.25em] uppercase text-white/60 block mb-2">
 											← Previous
 										</span>
 										<span
-											className="font-bebas text-white/60 group-hover:text-[#FFD600] transition-colors duration-200 leading-tight block"
+											className="font-bebas text-white/80 group-hover:text-[#FFD600] transition-colors duration-200 leading-tight block"
 											style={{ fontSize: 'clamp(16px, 1.5vw, 20px)' }}
 										>
 											{prevPost.title}
@@ -202,11 +202,11 @@ function BlogPost() {
 							<div className="text-right">
 								{nextPost && (
 									<Link to={`/blog/${nextPost.slug}`} className="group block">
-										<span className="font-barlow font-light text-[10px] tracking-[0.25em] uppercase text-white/25 block mb-2">
+										<span className="font-barlow font-light text-[10px] tracking-[0.25em] uppercase text-white/60 block mb-2">
 											Next →
 										</span>
 										<span
-											className="font-bebas text-white/60 group-hover:text-[#FFD600] transition-colors duration-200 leading-tight block"
+											className="font-bebas text-white/80 group-hover:text-[#FFD600] transition-colors duration-200 leading-tight block"
 											style={{ fontSize: 'clamp(16px, 1.5vw, 20px)' }}
 										>
 											{nextPost.title}

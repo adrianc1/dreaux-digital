@@ -1,4 +1,4 @@
-import aboutimg from '../src/assets/aboutimg2.jpg';
+import aboutimg from './assets/aboutimg2.jpg';
 
 function AboutUs() {
 	return (
@@ -41,7 +41,7 @@ function AboutUs() {
 
 						<div className="absolute bottom-8 left-6 lg:left-10 flex items-center gap-3">
 							<div className="w-px h-10 bg-[#FFD600] opacity-60" />
-							<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-white/40">
+							<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-white/70">
 								Est. 2024
 							</span>
 						</div>
@@ -57,26 +57,20 @@ function AboutUs() {
 							{/* Section label */}
 							<div className="about-anim-1 flex items-center gap-3 mb-8">
 								<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
 									Who I Am
 								</span>
 							</div>
 
 							{/* Heading */}
-							<div className="about-anim-2 overflow-hidden mb-1">
-								<h2
-									className="font-bebas text-white leading-none tracking-wide"
-									style={{ fontSize: 'clamp(52px, 7vw, 96px)' }}
-								>
-									ABOUT
-								</h2>
-							</div>
 							<div className="about-anim-2 overflow-hidden">
 								<h2
-									className="font-bebas text-[#FFD600] leading-none tracking-wide"
+									id="about-heading"
+									className="font-bebas leading-none tracking-wide"
 									style={{ fontSize: 'clamp(52px, 7vw, 96px)' }}
 								>
-									DREAUX DIGITAL
+									<span className="block text-white">ABOUT</span>
+									<span className="block text-[#FFD600]">DREAUX DIGITAL</span>
 								</h2>
 							</div>
 
@@ -85,30 +79,29 @@ function AboutUs() {
 
 							{/* Pull quote */}
 							<p className="about-anim-4 font-barlow font-semibold text-white/90 text-xl mb-6 tracking-wide">
-								Stress less. Go with Dreaux.
+								One developer, start to finish. No agency runaround.
 							</p>
 
 							{/* Body */}
 							<div
-								className="about-anim-5 font-barlow font-light text-white/50 leading-relaxed space-y-4"
+								className="about-anim-5 font-barlow font-light text-body leading-relaxed space-y-4"
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
 								<p>
-									Dreaux Digital is a solo web development studio
-									specializing in crafting modern, responsive, and highly
-									functional front-end solutions. With hands-on expertise in web
-									development and ongoing digital presence management, I ensure
-									your online assets are optimized and up-to-date —
-									<span className="text-white/80 font-normal">
-										{' '}
-										allowing you to focus on your core business.
-									</span>
+									I&apos;m Adrian, and Dreaux Digital is me. I build websites and
+									web applications for businesses, and I stay on to look after
+									them when that&apos;s what a client needs.
 								</p>
 								<p>
-									I partner with businesses and individuals to bring their
-									digital visions to life. Clear communication, meticulous
-									attention to detail, and a commitment to project success are
-									principles I never compromise on.
+									The work runs from business websites through to custom software,
+									the kind of thing a template can&apos;t do. I also take over sites
+									other people built: moving them off a platform you&apos;ve outgrown,
+									fixing the form that stopped sending, sorting out a domain nobody
+									can find the login for.
+								</p>
+								<p>
+									You deal directly with the person writing the code. No account
+									manager, no ticket queue, no handoff to a junior you never met.
 								</p>
 							</div>
 

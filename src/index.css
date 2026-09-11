@@ -15,8 +15,10 @@ body,
 	padding: 0;
 }
 body {
-	width: 100vw;
+	width: 100%;
 	font-family: 'Montserrat', sans-serif;
+	background: #000;
+	color: #fff;
 }
 
 @keyframes fadeIn {
@@ -110,5 +112,77 @@ body {
 @keyframes l23 {
 	100% {
 		transform: rotate(1turn);
+	}
+}
+
+/* The header is fixed at h-14 (56px); keep anchored sections clear of it. */
+:where(section[id], div[id], main[id]) {
+	scroll-margin-top: 4rem;
+}
+
+/* --- Accessibility --- */
+
+/* Contrast tiers for text on the black ground. Use these instead of
+   ad-hoc text-white/NN so new copy can't fall below the 4.5:1 AA floor.
+   Ratios are against #000. */
+.text-body {
+	color: rgb(255 255 255 / 0.75);
+} /* 11.5:1 - paragraphs, descriptions */
+.text-label {
+	color: rgb(255 255 255 / 0.7);
+} /* 10:1   - small tracked uppercase labels */
+.text-meta {
+	color: rgb(255 255 255 / 0.6);
+} /* 7.4:1  - dates, counters, legal */
+.text-display-muted {
+	color: rgb(255 255 255 / 0.55);
+} /* 6.3:1  - large display numerals only */
+
+/* Visible keyboard focus indicator on a dark ground.
+   #FFD600 on black is 14.8:1; the black ring separates it from light CTAs. */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+	outline: 2px solid #ffd600;
+	outline-offset: 2px;
+	border-radius: 1px;
+}
+
+/* Inputs set `outline: none` locally, so restore it for keyboard users. */
+.field-input:focus-visible {
+	outline: 2px solid #ffd600;
+	outline-offset: 2px;
+}
+
+/* Skip link: hidden until focused. */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 100;
+}
+.skip-link:focus {
+	left: 0;
+	width: auto;
+	height: auto;
+	padding: 12px 20px;
+	background: #ffd600;
+	color: #000;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
 	}
 }

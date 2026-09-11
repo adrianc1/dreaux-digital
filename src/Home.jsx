@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Services from './Services';
 import Hero from './Hero';
+import Proof from './Proof';
 import AboutUs from './About';
 import Process from './Process';
 import Contact from './Contact';
@@ -20,6 +21,7 @@ export default function Home() {
 	return (
 		<div id="home" className="home-container flex-1">
 			<Hero />
+			<Proof />
 			<AboutUs />
 			<Services />
 			<Projects />

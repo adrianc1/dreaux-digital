@@ -1,9 +1,29 @@
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Contact() {
 	const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 	const form = useRef();
+	const sentDialog = useRef(null);
+	const submitBtn = useRef(null);
+
+	// The sent panel covers the form, so move focus into it and let Escape
+	// dismiss it. Focus returns to the submit button on close.
+	useEffect(() => {
+		if (status !== 'sent') return;
+		sentDialog.current?.focus();
+
+		function onKeyDown(e) {
+			if (e.key === 'Escape') setStatus('idle');
+		}
+		document.addEventListener('keydown', onKeyDown);
+		return () => document.removeEventListener('keydown', onKeyDown);
+	}, [status]);
+
+	function dismissSent() {
+		setStatus('idle');
+		submitBtn.current?.focus();
+	}
 
 	function sendEmail(e) {
 		e.preventDefault();
@@ -43,7 +63,12 @@ function Contact() {
           outline: none;
           transition: border-color 0.2s ease;
         }
-        .field-input::placeholder { color: rgba(255,255,255,0.5); }
+        .field-input::placeholder { color: rgba(255,255,255,0.7); }
+        select.field-input { color: #fff; cursor: pointer; -webkit-appearance: none; appearance: none;
+          background-image: linear-gradient(45deg, transparent 50%, #FFD600 50%), linear-gradient(135deg, #FFD600 50%, transparent 50%);
+          background-position: calc(100% - 14px) calc(50% - 2px), calc(100% - 8px) calc(50% - 2px);
+          background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; padding-right: 28px; }
+        select.field-input option { background: #000; color: #fff; }
         .field-input:focus { border-color: rgba(255,214,0,0.6); }
         .field-label {
           font-family: 'Barlow', sans-serif;
@@ -51,7 +76,7 @@ function Contact() {
           font-size: 10px;
           letter-spacing: 0.25em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.5);
+          color: rgba(255,255,255,0.7);
           display: block;
           margin-bottom: 6px;
         }
@@ -82,38 +107,33 @@ function Contact() {
 						<div>
 							<div className="flex items-center gap-3 mb-6">
 								<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
 									Let's Connect
 								</span>
 							</div>
-							<div className="overflow-hidden mb-1">
-								<h2
-									className="font-bebas text-white leading-none tracking-wide"
-									style={{ fontSize: 'clamp(52px, 8vw, 110px)' }}
-								>
-									GET IN
-								</h2>
-							</div>
 							<div className="overflow-hidden">
 								<h2
-									className="font-bebas text-[#FFD600] leading-none tracking-wide"
+									id="contact-heading"
+									className="font-bebas leading-none tracking-wide"
 									style={{ fontSize: 'clamp(52px, 8vw, 110px)' }}
 								>
-									TOUCH
+									<span className="block text-white">GET IN</span>
+									<span className="block text-[#FFD600]">TOUCH</span>
 								</h2>
 							</div>
 							<div className="divider-anim w-12 h-[2px] bg-[#FFD600] mt-5 mb-8" />
 							<p
-								className="font-barlow font-light text-white/55 max-w-sm leading-relaxed"
+								className="font-barlow font-light text-body max-w-sm leading-relaxed"
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
-								Ready to start your project or just want to say hello? Send a
-								message and I'll get back to you ASAP.
+								Building something new, inheriting a mess, or just need someone
+								to keep the lights on. Tell me what you've got and I'll come
+								back with a straight answer.
 							</p>
 
 							{/* Decorative detail */}
 							<div className="mt-12 border-l border-[#FFD600]/30 pl-5 space-y-1">
-								<p className="font-bebas text-white/40 text-sm tracking-widest uppercase">
+								<p className="font-bebas text-white/70 text-sm tracking-widest uppercase">
 									Response Time
 								</p>
 								<p className="font-bebas text-[#FFD600] text-2xl tracking-wide">
@@ -126,18 +146,28 @@ function Contact() {
 						<div className="relative">
 							{/* Sent modal */}
 							{status === 'sent' && (
-								<div className="modal-anim absolute inset-0 z-20 bg-black border border-[#FFD600]/30 flex flex-col items-center justify-center gap-6 p-10 text-center">
-									<span className="font-bebas text-[#FFD600] text-6xl leading-none">
+								<div
+									ref={sentDialog}
+									role="dialog"
+									aria-modal="true"
+									aria-labelledby="sent-heading"
+									tabIndex={-1}
+									className="modal-anim absolute inset-0 z-20 bg-black border border-[#FFD600]/30 flex flex-col items-center justify-center gap-6 p-10 text-center focus:outline-none"
+								>
+									<span aria-hidden="true" className="font-bebas text-[#FFD600] text-6xl leading-none">
 										✓
 									</span>
-									<h3 className="font-bebas text-white text-3xl tracking-wide">
+									<h3
+										id="sent-heading"
+										className="font-bebas text-white text-3xl tracking-wide"
+									>
 										Message Sent
 									</h3>
-									<p className="font-barlow font-light text-white/40 text-sm">
+									<p className="font-barlow font-light text-white/70 text-sm">
 										Thanks! I'll be in touch shortly.
 									</p>
 									<button
-										onClick={() => setStatus('idle')}
+										onClick={dismissSent}
 										className="clip-cta font-barlow font-bold text-[11px] tracking-[0.2em] uppercase bg-[#FFD600] text-black px-8 py-3 transition-all duration-200 hover:bg-white cursor-pointer"
 									>
 										Done
@@ -147,9 +177,12 @@ function Contact() {
 
 							{/* Sending overlay */}
 							{status === 'sending' && (
-								<div className="modal-anim absolute inset-0 z-20 bg-black/80 border border-white/10 flex items-center justify-center">
+								<div
+									role="status"
+									className="modal-anim absolute inset-0 z-20 bg-black/80 border border-white/20 flex items-center justify-center"
+								>
 									<div className="flex items-center gap-4">
-										<div className="w-5 h-5 border-2 border-[#FFD600] border-t-transparent rounded-full animate-spin" />
+										<div aria-hidden="true" className="w-5 h-5 border-2 border-[#FFD600] border-t-transparent rounded-full animate-spin" />
 										<span className="font-bebas text-white tracking-widest text-xl">
 											Sending...
 										</span>
@@ -157,7 +190,12 @@ function Contact() {
 								</div>
 							)}
 
-							<form ref={form} onSubmit={sendEmail} className="space-y-8">
+							<form
+								ref={form}
+								onSubmit={sendEmail}
+								inert={status === 'sent' || status === 'sending'}
+								className="space-y-8"
+							>
 								<div>
 									<label className="field-label" htmlFor="name">
 										Name
@@ -185,6 +223,36 @@ function Contact() {
 									/>
 								</div>
 								<div>
+									<label className="field-label" htmlFor="need">
+										What do you need?
+									</label>
+									<select
+										id="need"
+										name="need"
+										required
+										defaultValue=""
+										className="field-input"
+									>
+										<option value="" disabled>
+											Select one
+										</option>
+										<option value="New website">New website</option>
+										<option value="Take over an existing site">
+											Take over an existing site
+										</option>
+										<option value="Fix something broken">
+											Fix something broken
+										</option>
+										<option value="Ongoing management">
+											Ongoing management
+										</option>
+										<option value="Custom application">
+											Custom application
+										</option>
+										<option value="Something else">Something else</option>
+									</select>
+								</div>
+								<div>
 									<label className="field-label" htmlFor="message">
 										Message
 									</label>
@@ -199,12 +267,13 @@ function Contact() {
 								</div>
 
 								{status === 'error' && (
-									<p className="font-barlow text-sm text-red-400/70">
+									<p role="alert" className="font-barlow text-sm text-red-400">
 										Failed to send. Please try again.
 									</p>
 								)}
 
 								<button
+									ref={submitBtn}
 									type="submit"
 									disabled={status === 'sending'}
 									className="clip-cta w-full font-barlow font-bold text-[12px] tracking-[0.2em] uppercase bg-[#FFD600] text-black py-4 transition-all duration-200 hover:bg-white hover:shadow-[0_0_30px_rgba(255,214,0,0.25)] disabled:opacity-50 cursor-pointer"

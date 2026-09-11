@@ -45,7 +45,7 @@ export default function Blog() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/40">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
 								Insights &amp; Articles
 							</span>
 						</div>
@@ -66,11 +66,11 @@ export default function Blog() {
 							<Link
 								key={post.slug}
 								to={`/blog/${post.slug}`}
-								className="blog-row row-anim border-t border-white/10 py-7 px-2 md:px-4 grid grid-cols-[1fr_auto] md:grid-cols-[80px_1fr_auto] gap-4 md:gap-10 items-center group"
+								className="blog-row row-anim border-t border-white/20 py-7 px-2 md:px-4 grid grid-cols-[1fr_auto] md:grid-cols-[80px_1fr_auto] gap-4 md:gap-10 items-center group"
 								style={{ animationDelay: `${i * 0.08}s` }}
 							>
 								{/* Index number — hidden on mobile */}
-								<span className="hidden md:block font-bebas text-white/40 text-3xl leading-none">
+								<span className="hidden md:block font-bebas text-white/55 text-3xl leading-none">
 									{String(i + 1).padStart(2, '0')}
 								</span>
 
@@ -83,11 +83,11 @@ export default function Blog() {
 										{post.title}
 									</h2>
 									{post.tagline && (
-										<p className="font-barlow font-light text-white/35 text-sm leading-snug max-w-xl">
+										<p className="font-barlow font-light text-white/70 text-sm leading-snug max-w-xl">
 											{post.tagline}
 										</p>
 									)}
-									<p className="font-barlow font-light text-[10px] tracking-[0.2em] uppercase text-white/25 mt-2">
+									<p className="font-barlow font-light text-[10px] tracking-[0.2em] uppercase text-white/60 mt-2">
 										{post.date}
 									</p>
 								</div>
@@ -98,7 +98,7 @@ export default function Blog() {
 								</span>
 							</Link>
 						))}
-						<div className="border-t border-white/10" />
+						<div className="border-t border-white/20" />
 					</div>
 				</div>
 

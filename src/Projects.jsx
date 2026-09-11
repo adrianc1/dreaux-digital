@@ -1,31 +1,42 @@
 import concretess from './assets/concretess.png';
+import hpcImg from './assets/hpc-hero.jpg';
 import tracerootImg from './assets/traceroot_home.png';
-import truckfixImg from './assets/truckfix1.png';
+import truckfixImg from './assets/truckfixheronew.jpg';
 
 const projects = [
 	{
-		img: tracerootImg,
-		title: 'TraceRoot',
-		tag: 'Web App',
-		desc: 'Multi-tenant inventory management platform with role-based access control, designed for regulated cannabis operations.',
-		url: 'https://traceroot.io/',
+		img: hpcImg,
+		title: 'Halfpipe · Cannable · HPC',
+		tag: 'Multi-Brand Retail',
+		desc: 'Three retail brands, three site builds, three migrations off a single agency. Each one now runs on a site the business owns outright, with no agency retainer.',
+		// The card shows HPC, so the link names it rather than implying all three.
+		url: 'https://hpcoxnard.com/',
+		linkLabel: 'Visit HPC Oxnard',
 		num: '01',
 	},
 	{
 		img: concretess,
-		title: 'Sports PWA',
+		title: 'Concrete Sports',
 		tag: 'Progressive Web App',
-		desc: 'High school sports hub for parents, teachers & students — team info, schedules, and more in one place.',
+		desc: 'High school sports hub for parents, teachers and students: schedules, scores and team info in one installable app. Now in its second year on a renewed agreement.',
 		url: 'https://concretesports.app/',
 		num: '02',
 	},
 	{
 		img: truckfixImg,
 		title: 'TruckFix',
-		tag: 'Full Stack App',
-		desc: 'Real-time repair shop finder for truck drivers in distress. Uses geolocation and Google Places API to surface nearby shops — with a Node.js backend and PostgreSQL for caching results.',
+		tag: 'Full-Stack App',
+		desc: 'Finds a truck driver the nearest repair shop when they break down. Live location, real inventory of nearby shops, built to answer in seconds on a bad connection.',
 		url: 'https://trytruckfix.com/',
 		num: '03',
+	},
+	{
+		img: tracerootImg,
+		title: 'TraceRoot',
+		tag: 'SaaS Platform',
+		desc: 'Inventory platform serving multiple businesses at once, each seeing only their own data. Staff permissions, a full audit trail, subscription billing, and plain-English search across inventory.',
+		url: 'https://traceroot.io/',
+		num: '04',
 	},
 ];
 
@@ -66,7 +77,7 @@ function Projects() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-label">
 								Selected Work
 							</span>
 						</div>
@@ -89,7 +100,7 @@ function Projects() {
 								href={p.url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="project-card card-border group block border border-white/10 bg-white/[0.02] overflow-hidden"
+								className="project-card card-border group block border border-white/20 bg-white/[0.02] overflow-hidden"
 							>
 								{/* Image */}
 								<div className="overflow-hidden h-52 bg-black">
@@ -111,18 +122,23 @@ function Projects() {
 												{p.title}
 											</h3>
 										</div>
-										<span className="font-bebas text-white/40 text-4xl leading-none ml-4 shrink-0">
+										<span className="font-bebas text-white/55 text-4xl leading-none ml-4 shrink-0">
 											{p.num}
 										</span>
 									</div>
 
-									<p className="font-barlow font-light text-sm text-white/40 leading-relaxed mb-5">
+									<p className="font-barlow font-light text-sm text-body leading-relaxed mb-5">
 										{p.desc}
 									</p>
 
 									<div className="flex items-center gap-2 font-barlow font-semibold text-[11px] tracking-[0.2em] uppercase text-[#FFD600]">
-										<span>View Project</span>
-										<span className="project-arrow text-base">↗</span>
+										<span>
+											{p.linkLabel || 'View Project'}
+											<span className="sr-only"> (opens in a new tab)</span>
+										</span>
+										<span aria-hidden="true" className="project-arrow text-base">
+											↗
+										</span>
 									</div>
 								</div>
 							</a>

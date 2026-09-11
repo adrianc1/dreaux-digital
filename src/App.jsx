@@ -34,6 +34,9 @@ function App() {
 
 	return (
 		<div className="flex flex-col min-h-screen  ">
+			<a className="skip-link" href="#main-content">
+				Skip to content
+			</a>
 			<Nav
 				onClick={toggleNav}
 				showNav={showNav}
@@ -41,11 +44,13 @@ function App() {
 				setShowTitle={setShowTitle}
 				isBlogPage={isBlogPage}
 			/>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/blog" element={<Blog />} />
-				<Route path="/blog/:slug" element={<BlogPost />} />
-			</Routes>
+			<main id="main-content" className="flex-1">
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/blog" element={<Blog />} />
+					<Route path="/blog/:slug" element={<BlogPost />} />
+				</Routes>
+			</main>
 
 			<Footer />
 		</div>

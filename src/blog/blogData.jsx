@@ -10,16 +10,16 @@ export const blogData = [
 		author: 'Adrian Crosby',
 		date: `June 2, 2025`,
 		tagline:
-			'Struggling to get leads from your site? These 5 common website mistakes could be costing your business money — and how to fix them.',
+			'Struggling to get leads from your site? These 5 common website mistakes could be costing your business money, and how to fix them.',
 		content: (
 			<>
 				<section className="flex-1 mt-8 flex flex-col gap-6">
 					<p>
-						First impressions matter — especially online. Your website is often
+						First impressions matter, especially online. Your website is often
 						the first interaction potential clients or customers have with your
 						brand. What do you want them to think? Do you come across as
 						trustworthy, professional, and easy to contact? Think about how this
-						site made you feel — did it reflect who I am, what I do, and why it
+						site made you feel. Did it reflect who I am, what I do, and why it
 						matters? These are reflections you should have with your current
 						site.
 						<br />
@@ -33,7 +33,7 @@ export const blogData = [
 						<br />
 						Unfortunately, many business and brand websites fall short and lose
 						opportunities (and revenue) because of common mistakes. Here are the
-						top 5 reasons small business websites fail — and how you can avoid
+						top 5 reasons small business websites fail, and how you can avoid
 						them like the ...
 					</p>
 
@@ -45,7 +45,7 @@ export const blogData = [
 							className="pb-6 mx-auto"
 						/>
 						<p>
-							Way too often, visitors arrive at a site and are left confused —
+							Way too often, visitors arrive at a site and are left confused,
 							like John Travolta in that famous Pulp Fiction meme, looking
 							around wondering what to do next. Without clear CTAs, users don’t
 							know whether to call, book, or buy and often just leave because
@@ -55,7 +55,7 @@ export const blogData = [
 							<br />
 							Common CTA problems include missing buttons, buttons that all look
 							the same, or CTAs buried in hard-to-find spots. A great site
-							guides visitors clearly, repeatedly, and strategically — above the
+							guides visitors clearly, repeatedly, and strategically: above the
 							fold, mid-page, and in the footer. <br />
 							<br />
 							🛠️<strong>Fix:</strong> Use bold, distinct CTAs aligned with your
@@ -97,11 +97,11 @@ export const blogData = [
 						/>
 						<p>
 							At the risk of sounding like a broken record:{' '}
-							<strong>First impressions matter — a lot</strong>
+							<strong>First impressions matter, a lot</strong>
 							. If your site looks clunky, uses low-quality stock photos, or
 							features sloppy AI-generated images with typos, visitors will
 							bounce fast. An outdated design signals neglect and damages
-							credibility. That said, some retro styles can work — when they’re
+							credibility. That said, some retro styles can work when they’re
 							intentional and well-executed.
 							<br />
 							<br />
@@ -121,7 +121,7 @@ export const blogData = [
 						<p>
 							Buzzwords and filler content don’t build trust. Authencity and
 							value do. When a site lacks clear messaging, helpful content, or
-							relevant blog posts, it not only confuses visitors — it also hurts
+							relevant blog posts, it not only confuses visitors, it also hurts
 							your search rankings. Many businesses rely on templated text or
 							AI-generated blurbs that say a lot without really saying anything
 							(and trust me - people <span className="italic">do</span> know).
@@ -139,7 +139,7 @@ export const blogData = [
 						<h4 className="text-2xl pb-6">5. Slow Load Times</h4>
 						<p className="loader mx-auto mb-6"></p>
 						<p>
-							In today’s fast-paced world, every second counts — and online,
+							In today’s fast-paced world, every second counts, and online
 							speed can make or break your business. Studies show that even a
 							one-second delay in page load time can lead to a significant drop
 							in conversions, bounce rates, and customer trust. Beyond user
@@ -156,7 +156,7 @@ export const blogData = [
 							<br />
 							🛠️ <strong>Fix:</strong> Optimize performance by compressing
 							images, enabling lazy loading, and using fast, secure hosting. I
-							help ensure your site runs efficiently across all devices —
+							help ensure your site runs efficiently across all devices,
 							improving user experience and boosting your visibility.
 						</p>
 					</section>
