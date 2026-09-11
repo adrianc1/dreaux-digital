@@ -16,9 +16,12 @@ export default function Blog() {
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
         .blog-row { transition: background 0.25s ease, border-color 0.25s ease; }
-        .blog-row:hover { background: rgba(255,214,0,0.03); border-color: rgba(255,214,0,0.3) !important; }
-        .blog-row:hover .blog-arrow { transform: translate(3px,-3px); opacity:1; }
-        .blog-arrow { transition: transform 0.25s ease, opacity 0.25s ease; opacity: 0.35; }
+        .blog-arrow { transition: transform 0.25s ease, opacity 0.25s ease; }
+        @media (hover: hover) {
+          .blog-arrow { opacity: 0.35; }
+          .blog-row:hover { background: rgba(255,214,0,0.03); border-color: rgba(255,214,0,0.3) !important; }
+          .blog-row:hover .blog-arrow { transform: translate(3px,-3px); opacity:1; }
+        }
         @keyframes expandX { from{transform:scaleX(0);opacity:0} to{transform:scaleX(1);opacity:1} }
         .divider-anim { transform-origin:left; animation: expandX 0.6s ease both 0.2s; }
         @keyframes fadeSlideUp {

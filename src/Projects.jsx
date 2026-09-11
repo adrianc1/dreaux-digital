@@ -47,12 +47,18 @@ function Projects() {
         .font-bebas  { font-family: 'Bebas Neue', sans-serif; }
         .font-barlow { font-family: 'Barlow', sans-serif; }
         .project-card { transition: all 0.3s ease; }
-        .project-card:hover .project-img { transform: scale(1.04); filter: grayscale(0%) brightness(1); }
-        .project-img { transition: transform 0.5s ease, filter 0.4s ease; filter: grayscale(30%) brightness(0.85); }
-        .project-card:hover .project-arrow { transform: translate(3px, -3px); opacity: 1; }
-        .project-arrow { transition: transform 0.25s ease, opacity 0.25s ease; opacity: 0.5; }
-        .project-card:hover .card-border { border-color: rgba(255,214,0,0.6); }
+        .project-img { transition: transform 0.5s ease, filter 0.4s ease; }
+        .project-arrow { transition: transform 0.25s ease, opacity 0.25s ease; }
         .card-border { transition: border-color 0.3s ease; }
+        /* The dimmed resting state only makes sense where a pointer can lift it.
+           Touch devices never fire :hover, so they'd be stuck in it permanently. */
+        @media (hover: hover) {
+          .project-img { filter: grayscale(30%) brightness(0.85); }
+          .project-arrow { opacity: 0.5; }
+          .project-card:hover .project-img { transform: scale(1.04); filter: grayscale(0%) brightness(1); }
+          .project-card:hover .project-arrow { transform: translate(3px, -3px); opacity: 1; }
+          .project-card:hover .card-border { border-color: rgba(255,214,0,0.6); }
+        }
         @keyframes expandX { from{transform:scaleX(0);opacity:0} to{transform:scaleX(1);opacity:1} }
         .divider-anim { transform-origin:left; animation: expandX 0.6s ease both 0.2s; }
       `}</style>
