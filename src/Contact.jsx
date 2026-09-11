@@ -43,7 +43,7 @@ function Contact() {
           outline: none;
           transition: border-color 0.2s ease;
         }
-        .field-input::placeholder { color: rgba(255,255,255,0.5); }
+        .field-input::placeholder { color: rgba(255,255,255,0.7); }
         .field-input:focus { border-color: rgba(255,214,0,0.6); }
         .field-label {
           font-family: 'Barlow', sans-serif;
@@ -51,7 +51,7 @@ function Contact() {
           font-size: 10px;
           letter-spacing: 0.25em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.5);
+          color: rgba(255,255,255,0.7);
           display: block;
           margin-bottom: 6px;
         }
@@ -82,7 +82,7 @@ function Contact() {
 						<div>
 							<div className="flex items-center gap-3 mb-6">
 								<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
 									Let's Connect
 								</span>
 							</div>
@@ -104,7 +104,7 @@ function Contact() {
 							</div>
 							<div className="divider-anim w-12 h-[2px] bg-[#FFD600] mt-5 mb-8" />
 							<p
-								className="font-barlow font-light text-white/55 max-w-sm leading-relaxed"
+								className="font-barlow font-light text-white/75 max-w-sm leading-relaxed"
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
 								Ready to start your project or just want to say hello? Send a
@@ -113,7 +113,7 @@ function Contact() {
 
 							{/* Decorative detail */}
 							<div className="mt-12 border-l border-[#FFD600]/30 pl-5 space-y-1">
-								<p className="font-bebas text-white/40 text-sm tracking-widest uppercase">
+								<p className="font-bebas text-white/70 text-sm tracking-widest uppercase">
 									Response Time
 								</p>
 								<p className="font-bebas text-[#FFD600] text-2xl tracking-wide">
@@ -133,7 +133,7 @@ function Contact() {
 									<h3 className="font-bebas text-white text-3xl tracking-wide">
 										Message Sent
 									</h3>
-									<p className="font-barlow font-light text-white/40 text-sm">
+									<p className="font-barlow font-light text-white/70 text-sm">
 										Thanks! I'll be in touch shortly.
 									</p>
 									<button
@@ -147,7 +147,7 @@ function Contact() {
 
 							{/* Sending overlay */}
 							{status === 'sending' && (
-								<div className="modal-anim absolute inset-0 z-20 bg-black/80 border border-white/10 flex items-center justify-center">
+								<div className="modal-anim absolute inset-0 z-20 bg-black/80 border border-white/20 flex items-center justify-center">
 									<div className="flex items-center gap-4">
 										<div className="w-5 h-5 border-2 border-[#FFD600] border-t-transparent rounded-full animate-spin" />
 										<span className="font-bebas text-white tracking-widest text-xl">
@@ -199,7 +199,7 @@ function Contact() {
 								</div>
 
 								{status === 'error' && (
-									<p className="font-barlow text-sm text-red-400/70">
+									<p className="font-barlow text-sm text-red-400">
 										Failed to send. Please try again.
 									</p>
 								)}

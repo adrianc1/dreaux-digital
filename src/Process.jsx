@@ -69,7 +69,7 @@ function Process() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
 								How It Works
 							</span>
 						</div>
@@ -85,7 +85,7 @@ function Process() {
 					</div>
 
 					{/* Steps — two-column on desktop */}
-					<div className="grid md:grid-cols-2 gap-px bg-white/5">
+					<div className="grid md:grid-cols-2 gap-px bg-white/15">
 						{steps.map((step, i) => (
 							<div
 								key={step.num}
@@ -114,7 +114,7 @@ function Process() {
 										{step.title}
 									</h3>
 									<p
-										className="font-barlow font-light text-white/45 leading-relaxed"
+										className="font-barlow font-light text-white/75 leading-relaxed"
 										style={{ fontSize: 'clamp(13px, 1.1vw, 15px)' }}
 									>
 										{step.desc}

@@ -66,7 +66,7 @@ function Projects() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
 								Selected Work
 							</span>
 						</div>
@@ -89,7 +89,7 @@ function Projects() {
 								href={p.url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="project-card card-border group block border border-white/10 bg-white/[0.02] overflow-hidden"
+								className="project-card card-border group block border border-white/20 bg-white/[0.02] overflow-hidden"
 							>
 								{/* Image */}
 								<div className="overflow-hidden h-52 bg-black">
@@ -111,12 +111,12 @@ function Projects() {
 												{p.title}
 											</h3>
 										</div>
-										<span className="font-bebas text-white/40 text-4xl leading-none ml-4 shrink-0">
+										<span className="font-bebas text-white/55 text-4xl leading-none ml-4 shrink-0">
 											{p.num}
 										</span>
 									</div>
 
-									<p className="font-barlow font-light text-sm text-white/40 leading-relaxed mb-5">
+									<p className="font-barlow font-light text-sm text-white/75 leading-relaxed mb-5">
 										{p.desc}
 									</p>
 

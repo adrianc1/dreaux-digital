@@ -81,7 +81,7 @@ function Services() {
 					<div className="mb-16">
 						<div className="flex items-center gap-3 mb-6">
 							<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+							<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
 								What I Offer
 							</span>
 						</div>
@@ -102,7 +102,7 @@ function Services() {
 							<div
 								key={s.num}
 								ref={(el) => (cardRefs.current[i] = el)}
-								className="svc-card border-t border-white/10 py-8 px-2 md:px-6 grid md:grid-cols-[80px_1fr_auto] gap-4 md:gap-10 items-start"
+								className="svc-card border-t border-white/20 py-8 px-2 md:px-6 grid md:grid-cols-[80px_1fr_auto] gap-4 md:gap-10 items-start"
 								style={{
 									opacity: 0,
 									transform: 'translateY(24px)',
@@ -110,7 +110,7 @@ function Services() {
 								}}
 							>
 								{/* Number */}
-								<span className="svc-num font-bebas text-5xl text-white/40 leading-none pt-1">
+								<span className="svc-num font-bebas text-5xl text-white/55 leading-none pt-1">
 									{s.num}
 								</span>
 
@@ -135,7 +135,7 @@ function Services() {
 									{s.tags.map((tag) => (
 										<span
 											key={tag}
-											className="font-barlow font-light text-[10px] tracking-[0.2em] uppercase text-white/70 border border-white/10 px-2.5 py-1 whitespace-nowrap"
+											className="font-barlow font-light text-[10px] tracking-[0.2em] uppercase text-white/70 border border-white/20 px-2.5 py-1 whitespace-nowrap"
 										>
 											{tag}
 										</span>
@@ -144,7 +144,7 @@ function Services() {
 							</div>
 						))}
 						{/* Final border */}
-						<div className="border-t border-white/10" />
+						<div className="border-t border-white/20" />
 					</div>
 
 					{/* CTA strip */}
@@ -153,7 +153,7 @@ function Services() {
 							<p className="font-bebas text-white tracking-wide text-2xl mb-1">
 								Ready to get started?
 							</p>
-							<p className="font-barlow font-light text-white/40 text-sm">
+							<p className="font-barlow font-light text-white/70 text-sm">
 								Let's build something worth seeing.
 							</p>
 						</div>

@@ -107,7 +107,7 @@ function Hero() {
 
 					{/* Tagline */}
 					<p
-						className="anim-tagline font-barlow font-light text-white/50 max-w-sm leading-relaxed"
+						className="anim-tagline font-barlow font-light text-white/75 max-w-sm leading-relaxed"
 						style={{ fontSize: 'clamp(14px, 1.4vw, 19px)' }}
 					>
 						Web development and management, so you can focus on growing your
@@ -124,7 +124,7 @@ function Hero() {
 						</a>
 						<a
 							href="#projects"
-							className="font-barlow font-light text-[12px] tracking-[0.18em] uppercase text-white/55 border-b border-white/45 pb-0.5 transition-all duration-200 hover:text-white/75 hover:border-white/40"
+							className="font-barlow font-light text-[12px] tracking-[0.18em] uppercase text-white/75 border-b border-white/60 pb-0.5 transition-all duration-200 hover:text-white hover:border-white/70"
 						>
 							My Work
 						</a>
@@ -137,7 +137,7 @@ function Hero() {
 					className="anim-scroll absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
 				>
 					<div className="scroll-bob w-px h-12 bg-gradient-to-b from-transparent to-white/50" />
-					<span className="font-barlow font-light text-[9px] tracking-[0.4em] uppercase text-white/40">
+					<span className="font-barlow font-light text-[9px] tracking-[0.4em] uppercase text-white/70">
 						Scroll
 					</span>
 				</a>

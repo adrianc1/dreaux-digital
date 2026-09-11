@@ -16,7 +16,7 @@ function Footer() {
         .font-barlow { font-family: 'Barlow', sans-serif; }
       `}</style>
 
-			<footer className="relative bg-black border-t border-white/5 font-barlow overflow-hidden">
+			<footer className="relative bg-black border-t border-white/15 font-barlow overflow-hidden">
 				{/* Top accent line */}
 				<div className="h-[2px] bg-gradient-to-r from-transparent via-[#FFD600]/40 to-transparent" />
 
@@ -27,7 +27,7 @@ function Footer() {
 							<p className="font-bebas text-[#FFD600] tracking-widest text-2xl leading-none mb-2">
 								DREAUX DIGITAL
 							</p>
-							<p className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/45">
+							<p className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/70">
 								Web Development &amp; Design
 							</p>
 						</div>
@@ -38,7 +38,7 @@ function Footer() {
 								<Link
 									key={link.to}
 									to={link.to}
-									className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/50 hover:text-[#FFD600] transition-colors duration-200"
+									className="font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/70 hover:text-[#FFD600] transition-colors duration-200"
 								>
 									{link.label}
 								</Link>
@@ -47,11 +47,11 @@ function Footer() {
 					</div>
 
 					{/* Bottom row */}
-					<div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/30">
+					<div className="mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/60">
 							© {new Date().getFullYear()} Dreaux Digital. All rights reserved.
 						</p>
-						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/30">
+						<p className="font-barlow font-light text-[11px] tracking-[0.1em] text-white/60">
 							Built by Dreaux Digital
 						</p>
 					</div>

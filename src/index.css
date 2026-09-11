@@ -112,3 +112,54 @@ body {
 		transform: rotate(1turn);
 	}
 }
+
+/* --- Accessibility --- */
+
+/* Visible keyboard focus indicator on a dark ground.
+   #FFD600 on black is 14.8:1; the black ring separates it from light CTAs. */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+	outline: 2px solid #ffd600;
+	outline-offset: 2px;
+	border-radius: 1px;
+}
+
+/* Inputs set `outline: none` locally, so restore it for keyboard users. */
+.field-input:focus-visible {
+	outline: 2px solid #ffd600;
+	outline-offset: 2px;
+}
+
+/* Skip link: hidden until focused. */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 100;
+}
+.skip-link:focus {
+	left: 0;
+	width: auto;
+	height: auto;
+	padding: 12px 20px;
+	background: #ffd600;
+	color: #000;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

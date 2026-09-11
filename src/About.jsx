@@ -41,7 +41,7 @@ function AboutUs() {
 
 						<div className="absolute bottom-8 left-6 lg:left-10 flex items-center gap-3">
 							<div className="w-px h-10 bg-[#FFD600] opacity-60" />
-							<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-white/40">
+							<span className="font-barlow font-light text-[10px] tracking-[0.3em] uppercase text-white/70">
 								Est. 2024
 							</span>
 						</div>
@@ -57,7 +57,7 @@ function AboutUs() {
 							{/* Section label */}
 							<div className="about-anim-1 flex items-center gap-3 mb-8">
 								<span className="w-2 h-2 rounded-full bg-[#FFD600] shrink-0" />
-								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/50">
+								<span className="font-barlow font-light text-[11px] tracking-[0.3em] uppercase text-white/70">
 									Who I Am
 								</span>
 							</div>
@@ -90,7 +90,7 @@ function AboutUs() {
 
 							{/* Body */}
 							<div
-								className="about-anim-5 font-barlow font-light text-white/50 leading-relaxed space-y-4"
+								className="about-anim-5 font-barlow font-light text-white/75 leading-relaxed space-y-4"
 								style={{ fontSize: 'clamp(14px, 1.2vw, 16px)' }}
 							>
 								<p>

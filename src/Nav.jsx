@@ -45,7 +45,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 			{/* ── Desktop / Persistent Nav Bar ── */}
 			<header
 				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-barlow
-          ${scrolled ? 'bg-black/95 backdrop-blur-sm border-b border-white/5' : 'bg-transparent'}`}
+          ${scrolled ? 'bg-black/95 backdrop-blur-sm border-b border-white/15' : 'bg-transparent'}`}
 			>
 				<div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 h-14 flex items-center justify-between">
 					{/* Logo / Wordmark */}
@@ -63,7 +63,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 							<Link
 								key={link.to}
 								to={link.to}
-								className="nav-link-line font-barlow font-light text-[11px] tracking-[0.25em] uppercase text-white/80 hover:text-white transition-colors duration-200"
+								className="nav-link-line font-barlow font-normal text-[11px] tracking-[0.25em] uppercase text-white hover:text-[#FFD600] transition-colors duration-200"
 							>
 								{link.label}
 							</Link>
@@ -84,7 +84,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 
 					{/* Mobile hamburger */}
 					<button
-						className="lg:hidden text-white text-2xl p-1 focus:outline-none"
+						className="lg:hidden text-white text-2xl p-1"
 						onClick={onClick}
 						aria-label="Toggle menu"
 					>
@@ -95,7 +95,7 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 
 			{/* ── Mobile Dropdown ── */}
 			<div
-				className={`lg:hidden fixed left-0 right-0 z-40 bg-black border-b border-white/10 transition-all duration-300 overflow-hidden font-barlow
+				className={`lg:hidden fixed left-0 right-0 z-40 bg-black border-b border-white/20 transition-all duration-300 overflow-hidden font-barlow
           ${showNav ? 'top-14 opacity-100' : '-top-full opacity-0 pointer-events-none'}`}
 			>
 				{/* Thin yellow accent top */}
@@ -105,12 +105,12 @@ function Nav({ showNav, onClick, showTitle, isBlogPage }) {
 					{navLinks.map((link, i) => (
 						<li
 							key={link.to}
-							className="mobile-link-anim border-b border-white/5 last:border-0"
+							className="mobile-link-anim border-b border-white/15 last:border-0"
 							style={{ animationDelay: `${i * 0.05}s` }}
 						>
 							<Link
 								to={link.to}
-								className="block py-4 font-barlow font-light text-[12px] tracking-[0.3em] uppercase text-white/75 hover:text-[#FFD600] transition-colors duration-200"
+								className="block py-4 font-barlow font-normal text-[12px] tracking-[0.3em] uppercase text-white hover:text-[#FFD600] transition-colors duration-200"
 							>
 								{link.label}
 							</Link>
