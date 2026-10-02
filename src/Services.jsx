@@ -102,7 +102,7 @@ function Services() {
 
 			<section
 				id="services"
-				className="relative bg-black overflow-hidden py-24 px-6 font-barlow"
+				className="relative bg-black overflow-hidden py-14 md:py-16 px-6 font-barlow"
 			>
 				{/* Grid lines */}
 				<div className="absolute inset-0 pointer-events-none">

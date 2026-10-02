@@ -31,7 +31,7 @@ function Proof() {
 			<section
 				id="proof"
 				aria-label="Client outcome"
-				className="relative bg-black border-y border-white/15 py-16 px-6 font-barlow overflow-hidden"
+				className="relative bg-black border-y border-white/15 py-14 md:py-16 px-6 font-barlow overflow-hidden"
 			>
 				{/* Diagonal accent, matching the other sections */}
 				<div

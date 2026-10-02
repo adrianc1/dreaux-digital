@@ -52,7 +52,7 @@ function Process() {
         .step-connector { background: linear-gradient(to bottom, rgba(255,214,0,0.4), rgba(255,214,0,0.05)); }
       `}</style>
 
-			<section className="relative bg-black overflow-hidden py-24 px-6 font-barlow">
+			<section className="relative bg-black overflow-hidden py-14 md:py-16 px-6 font-barlow">
 				{/* Grid lines */}
 				<div className="absolute inset-0 pointer-events-none">
 					{[25, 50, 75].map((p) => (
