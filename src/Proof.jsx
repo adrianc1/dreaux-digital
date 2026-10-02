@@ -88,7 +88,7 @@ function Proof() {
 							</p>
 							<footer className="mt-5">
 								<span className="block font-barlow font-semibold text-[11px] tracking-[0.25em] uppercase text-white">
-									Delia M.
+									Delia L.
 								</span>
 								<span className="block font-barlow font-light text-[11px] tracking-[0.18em] uppercase text-meta mt-1">
 									Operations Director, Greenbrier Holdings
