@@ -10,7 +10,7 @@ const projects = [
 		tag: 'Multi-Brand Retail',
 		desc: 'Three retail brands, three site builds, three migrations off a single agency. Each one now runs on a site the business owns outright, with no agency retainer.',
 		// The card shows HPC, so the link names it rather than implying all three.
-		url: 'https://www.hpcoxnard.com/',
+		url: 'https://hpc-oxnard.multiscreensite.com/',
 		linkLabel: 'Visit HPC Oxnard',
 		num: '01',
 	},
